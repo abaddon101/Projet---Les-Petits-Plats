@@ -51,41 +51,17 @@ const createCard = (recipe) => {
 
   let eachIngredient = recipe[1].ingredients
     .map(function (ingredients) {
-      if (
-        Object.prototype.hasOwnProperty.call(ingredients, "quantity") &&
-        Object.prototype.hasOwnProperty.call(ingredients, "unit")
-      ) {
-        return (
-          "<p class='mb-0'><span class='font-weight-bold ingredient'>" +
-          ingredients.ingredient +
-          "</span>: " +
-          ingredients.quantity +
-          ingredients.unit +
-          "</p>"
-        );
+      let quantity = ingredients.quantity ?? "";
+      let unit = ingredients.unit ?? "";
 
-        // A voir avec Romain
-      } else if (
-        Object.prototype.hasOwnProperty.call(ingredients, "quantity") &&
-        !Object.prototype.hasOwnProperty.call(ingredients, "unit")
-      ) {
-        return (
-          "<p class='mb-0'><span class='font-weight-bold ingredient'>" +
-          ingredients.ingredient +
-          "</span>: " +
-          ingredients.quantity +
-          "</p>"
-        );
-      } else if (
-        !Object.prototype.hasOwnProperty.call(ingredients, "quantity") &&
-        !Object.prototype.hasOwnProperty.call(ingredients, "unit")
-      ) {
-        return (
-          "<p class='mb-0'><span class='font-weight-bold ingredient'>" +
-          ingredients.ingredient +
-          "</span></p>"
-        );
-      }
+      return (
+        "<p class='mb-0'><span class='font-weight-bold ingredient'>" +
+        ingredients.ingredient +
+        "</span>: " +
+        quantity +
+        unit +
+        "</p>"
+      );
     })
     .join("");
 
@@ -99,26 +75,22 @@ const createCard = (recipe) => {
   });
   method.textContent = recipe[1].description;
 
+  // //Device section
+  // let appliances = create("p", {
+  //   class: "sr-only appliance",
+  // });
+  // appliances.textContent = recipe[1].appliance;
+  // //utensils section
+  // let utensils = create("div", {
+  //   class: "sr-only",
+  // });
+  // let eachUtensils = recipe[1].ustensils
+  //   .map(function (utensil) {
+  //     return "<p class='utensil'>" + utensil + "</p>";
+  //   })
+  //   .join("");
+  // utensils.innerHTML = eachUtensils;
 
-  //Device section
-  let appliances = create("p", {
-    class: "sr-only appliance",
-  });
-  appliances.textContent = recipe[1].appliance;
-  //utensils section
-  let utensils = create("div", {
-    class: "sr-only",
-  });
-  let eachUtensils = recipe[1].ustensils
-    .map(function (utensil) {
-      return "<p class='utensil'>" + utensil + "</p>";
-    })
-    .join("");
-  utensils.innerHTML = eachUtensils;
-
-
-
-  
   //Card body
   let cardBody = create("div", {
     class: "card-body d-flex justify-content-between card-content",
@@ -127,8 +99,8 @@ const createCard = (recipe) => {
   //Put in card body
   cardBody.appendChild(ingredients);
   cardBody.appendChild(method);
-  cardBody.appendChild(appliances);
-  cardBody.appendChild(utensils);
+  // cardBody.appendChild(appliances);
+  // cardBody.appendChild(utensils);
 
   //Card container
   let cardContainer = create("article", {
