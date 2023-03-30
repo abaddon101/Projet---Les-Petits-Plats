@@ -1,12 +1,13 @@
 import { recipes } from "../data/recipes.js";
+import { sortRecipes } from "../js/sortRecipes.js";
 
+import { dropDownContainer } from "../js/dropDown.js";
 //creation of an object with the array
-let recipesArray = Object.entries(recipes);
-console.log(recipesArray);
+const recipesArray = Object.entries(recipes);
 
 //Boucle Create element
 const create = (elm, attributes) => {
-  console.log(attributes);
+  // console.log(attributes);
   const element = document.createElement(elm);
   for (let key in attributes) {
     element.setAttribute(key, attributes[key]);
@@ -15,6 +16,7 @@ const create = (elm, attributes) => {
 };
 
 const createCard = (recipe) => {
+  // console.log(recipe);
   //Image
   let image = create("div", {
     class: "card-img-top card-img-placeholder",
@@ -45,7 +47,7 @@ const createCard = (recipe) => {
   headerParent.appendChild(timeParent);
 
   //Ingredients list
-  let ingredients = create("div", {
+  let ingredientContainer = create("div", {
     class: "ingredient-container",
   });
 
@@ -65,9 +67,7 @@ const createCard = (recipe) => {
     })
     .join("");
 
-  // A voir avec Romain
-
-  ingredients.innerHTML = eachIngredient;
+  ingredientContainer.innerHTML = eachIngredient;
 
   //cook instruction / method
   let method = create("p", {
@@ -75,32 +75,14 @@ const createCard = (recipe) => {
   });
   method.textContent = recipe[1].description;
 
-  // //Device section
-  // let appliances = create("p", {
-  //   class: "sr-only appliance",
-  // });
-  // appliances.textContent = recipe[1].appliance;
-  // //utensils section
-  // let utensils = create("div", {
-  //   class: "sr-only",
-  // });
-  // let eachUtensils = recipe[1].ustensils
-  //   .map(function (utensil) {
-  //     return "<p class='utensil'>" + utensil + "</p>";
-  //   })
-  //   .join("");
-  // utensils.innerHTML = eachUtensils;
-
   //Card body
   let cardBody = create("div", {
     class: "card-body d-flex justify-content-between card-content",
   });
 
   //Put in card body
-  cardBody.appendChild(ingredients);
+  cardBody.appendChild(ingredientContainer);
   cardBody.appendChild(method);
-  // cardBody.appendChild(appliances);
-  // cardBody.appendChild(utensils);
 
   //Card container
   let cardContainer = create("article", {
@@ -108,6 +90,13 @@ const createCard = (recipe) => {
   });
 
   //to DOM
+  // get the data appliance and ustensils for set attribut to the article :cardContainer
+  const getAppliance = recipe[1].appliance;
+  const getUstensils = recipe[1].ustensils;
+  cardContainer.setAttribute("appliance", getAppliance);
+  cardContainer.setAttribute("ustensils", getUstensils);
+
+  // console.log(getAppliance);
   cardContainer.appendChild(image);
   cardContainer.appendChild(headerParent);
   cardContainer.appendChild(cardBody);
@@ -120,3 +109,4 @@ const createCard = (recipe) => {
 };
 
 recipesArray.forEach((recipe) => createCard(recipe));
+
