@@ -1,13 +1,10 @@
 import { recipes } from "../data/recipes.js";
 
-let ingredientsArray = [];
 // loop for ingredients
+let ingredientsArray = [];
 for (let recipe of recipes) {
-  //  console.log(recipe);
   ingredientsArray.push(...recipe.ingredients);
-  // console.log(...recipe.ingredients);
 }
-
 // reformat ingredientsArray
 ingredientsArray = ingredientsArray
   .map((ingredient) => {
@@ -20,29 +17,25 @@ ingredientsArray = ingredientsArray
     // indexOf recupère le premier element de ma liste
     return ingredientList.indexOf(ingredient) == index;
   })
-  .toString();
-console.log(ingredientsArray);
+  .join("");
 
-let applianceArray = [];
 // loop for appliances
+let applianceArray = [];
 for (let recipe of recipes) {
-  // console.log(recipe);
   applianceArray.push(recipe.appliance);
-  // console.log(recipe.appliance);
 }
 // reformat ingredientsArray
 applianceArray = applianceArray
   .map((appliance) => {
-    return "<li>" + appliance + "</li>";
+    return "<li>" + appliance.toLowerCase() + "</li>";
   })
   .filter((appliance, index, applianceList) => {
     return applianceList.indexOf(appliance) == index;
   })
-  .toString();
-console.log(applianceArray);
+  .join("");
 
-let ustensilsArray = [];
 // loop for Ustensils
+let ustensilsArray = [];
 for (let recipe of recipes) {
   ustensilsArray.push(recipe.ustensils);
 }
@@ -54,42 +47,69 @@ ustensilsArray = ustensilsArray
   .filter((ustensils, index, ustensilsList) => {
     return ustensilsList.indexOf(ustensils) == index;
   })
-  .toString();
-console.log(ustensilsArray);
+  .join("");
 
 function initTheContainer(btn, container) {
-  console.log(btn);
-  console.log(container);
   const getTheInput = container.querySelector(".tag-search-input");
-
   const getTheUlIngredients = container.querySelector("#ingredients-dropdown");
   const getTheUlAppliance = container.querySelector("#appliances-dropdown");
   const getTheUlUstensils = container.querySelector("#utensils-dropdown");
 
   btn.addEventListener("click", (e) => {
-    console.log(e.target);
     container.classList.add("show");
+    // e.target.matches("#ingredients-tag-btn") permet de faire matcher ma cible avec l'id
     if (e.target.matches("#ingredients-tag-btn")) {
-      console.log("ingrédients");
       getTheUlIngredients.classList.add("show");
       getTheUlIngredients.innerHTML = ingredientsArray;
     } else if (e.target.matches("#appliances-tag-btn")) {
-      console.log("appliance");
       getTheUlAppliance.classList.add("show");
       getTheUlAppliance.innerHTML = applianceArray;
     } else if (e.target.matches("#utensils-tag-btn")) {
-      console.log("ustensils");
       getTheUlUstensils.classList.add("show");
       getTheUlUstensils.innerHTML = ustensilsArray;
     }
   });
+}
+function closeTheContainer(btn, container) {
+  // console.log(btn);
+  console.log(container);
+
+  let ingredientContainer = document.querySelector(
+    "#open-ingredient-container"
+  );
+  let appareilsContainer = document.querySelector("#open-appareils-container");
+  let utensilsContainer = document.querySelector("#open-utensils-container");
+  // on click of the other element, close the last open
+  window.addEventListener("click", (e) => {
+    console.log(e.target);
+    if (e.target.matches("#ingredients-tag-btn")) {
+      // appareilsContainer.classList.remove("show");
+      // utensilsContainer.classList.remove("show");
+    } else if (e.target.matches("#appliances-tag-btn")) {
+      ingredientContainer.classList.remove("show");
+      utensilsContainer.classList.remove("show");
+    } else if (e.target.matches("#utensils-tag-btn")) {
+      ingredientContainer.classList.remove("show");
+      appareilsContainer.classList.remove("show");
+    } else {
+      utensilsContainer.classList.remove("show");
+      ingredientContainer.classList.remove("show");
+      appareilsContainer.classList.remove("show");
+    }
+  });
+}
+
+function opendropDownIngredients() {
+  getTheUlIngredients.classList.add("show");
+  getTheUlIngredients.innerHTML = ingredientsArray;
+  appareilsContainer.classList.remove("show");
+  utensilsContainer.classList.remove("show");
 }
 
 export function dropDownContainer() {
   let ingredientsBtnTag = document.querySelector("#ingredients-tag-btn");
   let appliancesBtnTag = document.querySelector("#appliances-tag-btn");
   let utensilsBtnTag = document.querySelector("#utensils-tag-btn");
-
   let ingredientContainer = document.querySelector(
     "#open-ingredient-container"
   );
@@ -99,6 +119,10 @@ export function dropDownContainer() {
   initTheContainer(ingredientsBtnTag, ingredientContainer);
   initTheContainer(appliancesBtnTag, appareilsContainer);
   initTheContainer(utensilsBtnTag, utensilsContainer);
+
+  closeTheContainer(ingredientsBtnTag, ingredientContainer);
+  closeTheContainer(appliancesBtnTag, appareilsContainer);
+  closeTheContainer(utensilsBtnTag, utensilsContainer);
   return;
 }
 dropDownContainer();
