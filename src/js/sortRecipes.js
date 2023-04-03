@@ -1,8 +1,6 @@
 /// Sort medias
 import { recipes } from "../data/recipes.js";
 
-
-
 export function sortRecipes(sortBy) {
   if (sortBy === "ingredients") {
     recipesArray.sort((a, b) => b.appliance - a.appliance);
@@ -26,4 +24,3 @@ export function sortRecipes(sortBy) {
     });
   }
 }
-console.log("hola the filter");
