@@ -9,7 +9,12 @@ for (let recipe of recipes) {
 // reformat ingredientsArray
 ingredientsArray = ingredientsArray
   .map((ingredient) => {
-    return "<li>" + ingredient.ingredient.toLowerCase() + "</li>";
+    // ajout d'une balise pour créer le lien
+    return (
+      "<a class='dropdown-choices-item' href='#'><li class='dropdown-choices-list' >" +
+      ingredient.ingredient.toLowerCase() +
+      "</li></a>"
+    );
   })
   .filter((ingredient, index, ingredientList) => {
     // récupère l'index de l'ingrédient actuellement dans la liste
@@ -27,7 +32,11 @@ for (let recipe of recipes) {
 // reformat applianceArray
 applianceArray = applianceArray
   .map((appliance) => {
-    return "<li>" + appliance.toLowerCase() + "</li>";
+    return (
+      "<a class='dropdown-choices-item' href='#'><li class='dropdown-choices-list' >" +
+      appliance.toLowerCase() +
+      "</li></a>"
+    );
   })
   .filter((appliance, index, applianceList) => {
     return applianceList.indexOf(appliance) == index;
@@ -41,7 +50,11 @@ for (let recipe of recipes) {
 // reformat ustensilsArray
 ustensilsArray = ustensilsArray
   .map((ustensils) => {
-    return "<li>" + ustensils.toLowerCase() + "</li>";
+    return (
+      "<a class='dropdown-choices-item' href='#'><li class='dropdown-choices-list' >" +
+      ustensils.toLowerCase() +
+      "</li></a>"
+    );
   })
   .filter((ustensils, index, ustensilsList) => {
     return ustensilsList.indexOf(ustensils) == index;

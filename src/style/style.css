@@ -23,9 +23,18 @@ span#launch-search {
   display: none;
   list-style-type: none;
   text-overflow: ellipsis;
- 
+
   overflow: hidden;
 }
+.dropdown-choices-list:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown-choices-item {
+  color: white;
+  text-decoration: none;
+}
+
 
 .show-opts .dropdown-choices {
   display: flex;
