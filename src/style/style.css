@@ -16,10 +16,15 @@ span#launch-search {
 .dropdown-parent {
   position: relative;
   z-index: 100;
+  margin-right: 25px;
 }
 
 .dropdown-choices {
   display: none;
+  list-style-type: none;
+  text-overflow: ellipsis;
+ 
+  overflow: hidden;
 }
 
 .show-opts .dropdown-choices {
@@ -58,15 +63,14 @@ li.dropdown-item {
 .btn {
   padding: 1.25rem;
   font-weight: 500;
+  width: 250px;
 }
 
 .btn:hover {
   color: white;
 }
 
-.bg-primary input[type="text"] {
-  color: white;
-}
+/* */
 
 .btn.bg-green,
 .bg-green,
@@ -93,7 +97,9 @@ li.dropdown-item {
 }
 
 .show {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5rem;
 }
 
 .opened-btn-container {
@@ -103,7 +109,11 @@ li.dropdown-item {
 .opened-btn-container.show {
   width: fit-content;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
+  position: relative;
+  top: -73px;
+  left: 12px;
 }
 
 button.btn.selected-tag-btn {

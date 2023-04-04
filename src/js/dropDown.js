@@ -1,4 +1,5 @@
 import { recipes } from "../data/recipes.js";
+import { searchAlgorithme } from "./searchAlgo.js";
 
 // loop for ingredients
 let ingredientsArray = [];
@@ -18,13 +19,12 @@ ingredientsArray = ingredientsArray
     return ingredientList.indexOf(ingredient) == index;
   })
   .join("");
-
 // loop for appliances
 let applianceArray = [];
 for (let recipe of recipes) {
   applianceArray.push(recipe.appliance);
 }
-// reformat ingredientsArray
+// reformat applianceArray
 applianceArray = applianceArray
   .map((appliance) => {
     return "<li>" + appliance.toLowerCase() + "</li>";
@@ -33,28 +33,28 @@ applianceArray = applianceArray
     return applianceList.indexOf(appliance) == index;
   })
   .join("");
-
 // loop for Ustensils
 let ustensilsArray = [];
 for (let recipe of recipes) {
-  ustensilsArray.push(recipe.ustensils);
+  ustensilsArray.push(...recipe.ustensils);
 }
-// reformat ingredientsArray
+// reformat ustensilsArray
 ustensilsArray = ustensilsArray
   .map((ustensils) => {
-    return "<li>" + ustensils + "</li>";
+    return "<li>" + ustensils.toLowerCase() + "</li>";
   })
   .filter((ustensils, index, ustensilsList) => {
     return ustensilsList.indexOf(ustensils) == index;
   })
   .join("");
 
+// Initialisation des différents dropDowns
 function initTheContainer(btn, container) {
-  const getTheInput = container.querySelector(".tag-search-input");
   const getTheUlIngredients = container.querySelector("#ingredients-dropdown");
   const getTheUlAppliance = container.querySelector("#appliances-dropdown");
   const getTheUlUstensils = container.querySelector("#utensils-dropdown");
 
+  // Event au click, ouverture des différents dropdown
   btn.addEventListener("click", (e) => {
     container.classList.add("show");
     // e.target.matches("#ingredients-tag-btn") permet de faire matcher ma cible avec l'id
@@ -70,10 +70,8 @@ function initTheContainer(btn, container) {
     }
   });
 }
-function closeTheContainer(btn, container) {
-  // console.log(btn);
-  console.log(container);
-
+// Fermeture des différents dropdown
+function closeTheContainer() {
   let ingredientContainer = document.querySelector(
     "#open-ingredient-container"
   );
@@ -81,10 +79,14 @@ function closeTheContainer(btn, container) {
   let utensilsContainer = document.querySelector("#open-utensils-container");
   // on click of the other element, close the last open
   window.addEventListener("click", (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     if (e.target.matches("#ingredients-tag-btn")) {
-      // appareilsContainer.classList.remove("show");
-      // utensilsContainer.classList.remove("show");
+      appareilsContainer.classList.remove("show");
+      utensilsContainer.classList.remove("show");
+    }
+    // si on clique sur l'input, cela arrettera la fermeture des dropdown
+    else if (e.target.matches(".tag-search-input")) {
+      e.stopPropagation;
     } else if (e.target.matches("#appliances-tag-btn")) {
       ingredientContainer.classList.remove("show");
       utensilsContainer.classList.remove("show");
@@ -99,13 +101,7 @@ function closeTheContainer(btn, container) {
   });
 }
 
-function opendropDownIngredients() {
-  getTheUlIngredients.classList.add("show");
-  getTheUlIngredients.innerHTML = ingredientsArray;
-  appareilsContainer.classList.remove("show");
-  utensilsContainer.classList.remove("show");
-}
-
+// Fonction qui permet de centraliser les fonctions, et les exporter dans la factory
 export function dropDownContainer() {
   let ingredientsBtnTag = document.querySelector("#ingredients-tag-btn");
   let appliancesBtnTag = document.querySelector("#appliances-tag-btn");
@@ -115,14 +111,13 @@ export function dropDownContainer() {
   );
   let appareilsContainer = document.querySelector("#open-appareils-container");
   let utensilsContainer = document.querySelector("#open-utensils-container");
-
   initTheContainer(ingredientsBtnTag, ingredientContainer);
   initTheContainer(appliancesBtnTag, appareilsContainer);
   initTheContainer(utensilsBtnTag, utensilsContainer);
 
-  closeTheContainer(ingredientsBtnTag, ingredientContainer);
-  closeTheContainer(appliancesBtnTag, appareilsContainer);
-  closeTheContainer(utensilsBtnTag, utensilsContainer);
+  // SEARCH ALGO
+  searchAlgorithme();
+  closeTheContainer();
   return;
 }
 dropDownContainer();
