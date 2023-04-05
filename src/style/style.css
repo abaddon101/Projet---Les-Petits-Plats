@@ -26,11 +26,27 @@ span#launch-search {
 
   overflow: hidden;
 }
-.dropdown-choices-list:hover {
+.dropdown-choices-ingredient:hover {
   background-color: white;
   color: black;
 }
-.dropdown-choices-item {
+.dropdown-choices-ingredient {
+  color: white;
+  text-decoration: none;
+}
+.dropdown-choices-appliance:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown-choices-appliance {
+  color: white;
+  text-decoration: none;
+}
+.dropdown-choices-ustensils:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown-choices-ustensils {
   color: white;
   text-decoration: none;
 }

@@ -29,20 +29,44 @@ export function searchAlgorithme(ingredients, appareil, ustensils) {
   searchInputBar.addEventListener("change", function () {
     console.log("SearchBar Modifié");
   });
+  // au clic
   window.addEventListener("click", function (e) {
-    if (e.target.matches(".dropdown-choices-list")) {
+    if (e.target.matches(".dropdown-choices-ingredient-list")) {
       e.stopPropagation;
-      console.log("ingrédients, appareil ou ustensils séléctionné");
+      console.log(e.target.textContent);
+      selectTags();
+    } else if (e.target.matches(".dropdown-choices-appliance-list")) {
+      e.stopPropagation;
+      console.log(e.target.textContent);
+      selectTags();
+    } else if (e.target.matches(".dropdown-choices-ustensils-list")) {
+      e.stopPropagation;
+      console.log(e.target.textContent);
       selectTags();
     }
   });
 
   // creation elements Tags
   function selectTags() {
-    const selectTagsId = document.querySelector("#selected-tags");
-    const createTags = document.createElement("div");
-    selectTagsId.appendChild(createTags);
-    createTags.innerHTML = nameArray;
+    window.addEventListener("click", (e) => {
+      if (e.target.matches(".dropdown-choices-ingredient-list")) {
+        const selectTagsId = document.querySelector("#selected-tags");
+        const createTags = document.createElement("div");
+        selectTagsId.appendChild(createTags);
+        createTags.innerHTML = e.target.textContent;
+      } else if (e.target.matches(".dropdown-choices-appliance-list")) {
+        const selectTagsId = document.querySelector("#selected-tags");
+        const createTags = document.createElement("div");
+        selectTagsId.appendChild(createTags);
+        createTags.innerHTML = e.target.textContent;
+      }
+      if (e.target.matches(".dropdown-choices-ustensils-list")) {
+        const selectTagsId = document.querySelector("#selected-tags");
+        const createTags = document.createElement("div");
+        selectTagsId.appendChild(createTags);
+        createTags.innerHTML = e.target.textContent;
+      }
+    });
 
     return;
   }

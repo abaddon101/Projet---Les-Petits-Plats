@@ -12,8 +12,8 @@ ingredientsArray = ingredientsArray
   .map((ingredient) => {
     // ajout d'une balise pour créer le lien
     return (
-      "<a class='dropdown-choices-item' href='#'><li class='dropdown-choices-list' >" +
-      ingredient.ingredient.toLowerCase() +
+      "<a class=dropdown-choices-ingredient href='#'><li class=dropdown-choices-ingredient-list  >" +
+      ingredient.ingredient.toLowerCase()  +
       "</li></a>"
     );
   })
@@ -36,7 +36,7 @@ applianceArray = applianceArray
   .map((appliance) => {
     // ajout d'une balise pour créer le lien
     return (
-      "<a class='dropdown-choices-item' href='#'><li class='dropdown-choices-list' >" +
+      "<a class='dropdown-choices-appliance' href='#'><li class='dropdown-choices-appliance-list' >" +
       appliance.toLowerCase() +
       "</li></a>"
     );
@@ -55,7 +55,7 @@ ustensilsArray = ustensilsArray
   .map((ustensils) => {
     // ajout d'une balise pour créer le lien
     return (
-      "<a class='dropdown-choices-item' href='#'><li class='dropdown-choices-list' >" +
+      "<a class='dropdown-choices-ustensils' href='#'><li class='dropdown-choices-ustensils-list' >" +
       ustensils.toLowerCase() +
       "</li></a>"
     );
@@ -65,12 +65,6 @@ ustensilsArray = ustensilsArray
   })
   .join("");
 
-// function initThetag() {
-
-//   console.log(tagName);
-//   return;
-// }
-// initThetag();
 
 // Initialisation des différents dropDowns
 function initTheContainer(btn, container) {
@@ -84,8 +78,7 @@ function initTheContainer(btn, container) {
   // Event au click, ouverture des différents dropdown
   btn.addEventListener("click", (e) => {
     container.classList.add("show");
-    let elementList = document.querySelectorAll("a");
-    // console.log(ingredientsArray);
+
     // e.target.matches("#ingredients-tag-btn") permet de faire matcher ma cible avec l'id
     if (e.target.matches("#ingredients-tag-btn")) {
       getTheUlIngredients.classList.add("show");
@@ -119,7 +112,7 @@ function closeTheContainer() {
     // si on clique sur l'input, cela arrettera la fermeture des dropdown
     else if (e.target.matches(".tag-search-input")) {
       e.stopPropagation;
-    }  else if (e.target.matches("#appliances-tag-btn")) {
+    } else if (e.target.matches("#appliances-tag-btn")) {
       ingredientContainer.classList.remove("show");
       utensilsContainer.classList.remove("show");
     } else if (e.target.matches("#utensils-tag-btn")) {
