@@ -1,25 +1,49 @@
 //////////////////////////// SEARCH ALGO VERSION 1 ////////////////////////////
 import { recipes } from "../data/recipes.js";
 
-console.log(recipes);
-// loop for name
-let nameArray = [];
-for (let recipe of recipes) {
-  nameArray.push(...recipe.name);
-  console.log(recipe.name);
-}
-nameArray = nameArray.map((name) => {
-  // ajout d'une balise pour créer le lien
-  return name.toLowerCase();
+let ingredientTags = [];
+// recupère toute mes recettes
+recipes.forEach((recipe) => {
+  // console.log(recipe);
+  // recupère tout mes ingrédients présent dans mes {}
+  recipe.ingredients.forEach(({ ingredient }) => {
+    console.log(ingredient);
+    const wordingredient =
+      // recupère le premier caractère de la chaine et le met en maj
+      ingredient.charAt(0).toUpperCase() +
+      // ensuite, permet d'accéder au reste des caractère de la chaine
+      // en faisant ommencer au deuxième caractère
+      ingredient.substring(1).toLowerCase();
+    // si mon tableau inclu la constante wordIngredient, alors on push le tableau
+    if (!ingredientTags.includes(wordingredient)) {
+      ingredientTags.push(wordingredient);
+    }
+  });
 });
-console.log(nameArray);
+
+const table = [ingredientTags];
+// mon tableau recupère tout les noms des ingrédients
+console.log(table);
+
+// // loop for name
+
+// let nameArray = [];
+// for (let recipe of recipes) {
+//   nameArray.push(...recipe.name);
+//   console.log(recipe.name);
+// }
+// nameArray = nameArray.map((name) => {
+//   // ajout d'une balise pour créer le lien
+//   return name.toLowerCase();
+
+// });
 
 // get the id
 
 export function searchAlgorithme(ingredients, appareil, ustensils) {
-  console.log(ingredients);
-  console.log(appareil);
-  console.log(ustensils);
+  // console.log(ingredients);
+  // console.log(appareil);
+  // console.log(ustensils);
   // modification de l'input barre de recherche
   // recherche par barre de recherche par 3  caractères grâce à une regexp
   // s'actualise pour chaque nouveau caractère
@@ -29,18 +53,16 @@ export function searchAlgorithme(ingredients, appareil, ustensils) {
   searchInputBar.addEventListener("change", function () {
     console.log("SearchBar Modifié");
   });
-  // au clic
+  // au clic de mes éléments, lance la fonction selectTags
+  // => afficher les tags séléctionnés
   window.addEventListener("click", function (e) {
     if (e.target.matches(".dropdown-choices-ingredient-list")) {
-      e.stopPropagation;
       console.log(e.target.textContent);
       selectTags();
     } else if (e.target.matches(".dropdown-choices-appliance-list")) {
-      e.stopPropagation;
       console.log(e.target.textContent);
       selectTags();
     } else if (e.target.matches(".dropdown-choices-ustensils-list")) {
-      e.stopPropagation;
       console.log(e.target.textContent);
       selectTags();
     }
@@ -48,25 +70,37 @@ export function searchAlgorithme(ingredients, appareil, ustensils) {
 
   // creation elements Tags
   function selectTags() {
-    window.addEventListener("click", (e) => {
-      if (e.target.matches(".dropdown-choices-ingredient-list")) {
-        const selectTagsId = document.querySelector("#selected-tags");
-        const createTags = document.createElement("div");
-        selectTagsId.appendChild(createTags);
-        createTags.innerHTML = e.target.textContent;
-      } else if (e.target.matches(".dropdown-choices-appliance-list")) {
-        const selectTagsId = document.querySelector("#selected-tags");
-        const createTags = document.createElement("div");
-        selectTagsId.appendChild(createTags);
-        createTags.innerHTML = e.target.textContent;
-      }
-      if (e.target.matches(".dropdown-choices-ustensils-list")) {
-        const selectTagsId = document.querySelector("#selected-tags");
-        const createTags = document.createElement("div");
-        selectTagsId.appendChild(createTags);
-        createTags.innerHTML = e.target.textContent;
-      }
-    });
+    const selectTagsId = document.querySelector("#selected-tags");
+    const createTags = document.createElement("div");
+    selectTagsId.appendChild(createTags);
+
+    createTags.innerHTML = "élement cliqué";
+
+    // trouver un moyen d'afficher dès le premier élément
+    // empecher l'incrémenation de +1 à chaque fois.
+    // window.addEventListener("click", (e) => {
+    //   // pourquoi ça incrément +1 + 2 + 3...
+    //   if (e.target.matches(".dropdown-choices-ingredient-list")) {
+    //     const selectTagsId = document.querySelector("#selected-tags");
+    //     const createTags = document.createElement("div");
+    //     selectTagsId.appendChild(createTags);
+    //     createTags.innerHTML = e.target.textContent;
+    //   }
+    //   // pourquoi ça incrément +1 + 2 + 3...
+    //   else if (e.target.matches(".dropdown-choices-appliance-list")) {
+    //     const selectTagsId = document.querySelector("#selected-tags");
+    //     const createTags = document.createElement("div");
+    //     selectTagsId.appendChild(createTags);
+    //     createTags.innerHTML = e.target.textContent;
+    //   }
+    //   // pourquoi ça incrément +1 + 2 + 3...
+    //   else if (e.target.matches(".dropdown-choices-ustensils-list")) {
+    //     const selectTagsId = document.querySelector("#selected-tags");
+    //     const createTags = document.createElement("div");
+    //     selectTagsId.appendChild(createTags);
+    //     createTags.innerHTML = e.target.textContent;
+    //   }
+    // });
 
     return;
   }

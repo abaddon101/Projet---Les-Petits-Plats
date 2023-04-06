@@ -13,7 +13,7 @@ ingredientsArray = ingredientsArray
     // ajout d'une balise pour créer le lien
     return (
       "<a class=dropdown-choices-ingredient href='#'><li class=dropdown-choices-ingredient-list  >" +
-      ingredient.ingredient.toLowerCase()  +
+      ingredient.ingredient.toLowerCase() +
       "</li></a>"
     );
   })
@@ -65,11 +65,10 @@ ustensilsArray = ustensilsArray
   })
   .join("");
 
-
 // Initialisation des différents dropDowns
 function initTheContainer(btn, container) {
-  console.log(btn);
-  console.log(container);
+  // console.log(btn);
+  // console.log(container);
 
   const getTheUlIngredients = container.querySelector("#ingredients-dropdown");
   const getTheUlAppliance = container.querySelector("#appliances-dropdown");
@@ -129,7 +128,7 @@ function closeTheContainer() {
 // Fonction qui permet de centraliser les fonctions, et les exporter dans la factory
 export function dropDownContainer() {
   let ingredientsBtnTag = document.querySelector("#ingredients-tag-btn");
-  console.log(ingredientsBtnTag);
+  // console.log(ingredientsBtnTag);
   let appliancesBtnTag = document.querySelector("#appliances-tag-btn");
   let utensilsBtnTag = document.querySelector("#utensils-tag-btn");
   let ingredientContainer = document.querySelector(
