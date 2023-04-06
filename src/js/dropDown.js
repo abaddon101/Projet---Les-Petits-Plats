@@ -1,5 +1,8 @@
 import { recipes } from "../data/recipes.js";
-import { searchAlgorithme } from "./searchAlgo.js";
+// import { searchAlgorithme } from "./searchAlgo.js";
+// Création de 3 tableaux: Ingrédients, Appareil & Ustensils
+// Qui seront apellés dans la dropDownContainer
+// Qui apellera les fonctions initContainer
 const selectedIngredients = [];
 const selectedAppareils = [];
 const selectedUstensils = [];
@@ -55,10 +58,11 @@ ustensilsArray = ustensilsArray
 // Initialisation des différents dropDowns
 function initTheContainer(btn, container, listElements, listElementsSelected) {
   // console.log(listElements);
-  // console.log();
+  //les tableaux sont vides jusqu'a çe qu'on les exploite
+  console.log(listElementsSelected);
+
   const listContainer = container.querySelector(".dropdown-choices");
   const inputSearch = container.querySelector(".tag-search-input");
-  // console.log(listContainer);
 
   // Event au click, ouverture des différents dropdown
   btn.addEventListener("click", (e) => {
@@ -82,11 +86,20 @@ function initTheContainer(btn, container, listElements, listElementsSelected) {
       return "<li>" + element + "</li>";
     })
     .join("");
+
+  // recupère toute les li
   listContainer.querySelectorAll("li").forEach((element) => {
+    // fait un event au click sur chacun des li
     element.addEventListener("click", () => {
-      console.log(element.innerText);
+      const selectTagsId = document.querySelector("#selected-tags");
+      const createTags = document.createElement("div");
+      selectTagsId.appendChild(createTags);
+      // pousse ensuite les élements sélectionné
       listElementsSelected.push(element.innerText);
-      console.log(listElementsSelected);
+      // console.log(listElementsSelected);
+      // maintenant renvoyer ces élements
+      // dans un tag qui s'iplémentera au dessus
+      createTags.innerHTML = element.innerText;
     });
   });
 }
@@ -98,6 +111,7 @@ function closeTheContainer() {
   );
   let appareilsContainer = document.querySelector("#open-appareils-container");
   let utensilsContainer = document.querySelector("#open-utensils-container");
+
   // on click of the other element, close the last open
   window.addEventListener("click", (e) => {
     // console.log(e.target);
@@ -154,7 +168,7 @@ export function dropDownContainer() {
   );
 
   // SEARCH ALGO
-  searchAlgorithme(ingredientsBtnTag, appliancesBtnTag, utensilsBtnTag);
+  // searchAlgorithme(ingredientsBtnTag, appliancesBtnTag, utensilsBtnTag);
 
   closeTheContainer();
   return;

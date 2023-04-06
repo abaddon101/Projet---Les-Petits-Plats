@@ -25,29 +25,9 @@ const table = [ingredientTags];
 // mon tableau recupère tout les noms des ingrédients
 console.log(table);
 
-// // loop for name
-
-// let nameArray = [];
-// for (let recipe of recipes) {
-//   nameArray.push(...recipe.name);
-//   console.log(recipe.name);
-// }
-// nameArray = nameArray.map((name) => {
-//   // ajout d'une balise pour créer le lien
-//   return name.toLowerCase();
-
-// });
-
-// get the id
 
 export function searchAlgorithme(ingredients, appareil, ustensils) {
-  // console.log(ingredients);
-  // console.log(appareil);
-  // console.log(ustensils);
-  // modification de l'input barre de recherche
-  // recherche par barre de recherche par 3  caractères grâce à une regexp
-  // s'actualise pour chaque nouveau caractère
-  // faire une recherche par name
+
   const searchInputBar = document.querySelector("#search-input");
 
   searchInputBar.addEventListener("change", function () {
@@ -56,42 +36,7 @@ export function searchAlgorithme(ingredients, appareil, ustensils) {
   // au clic de mes éléments, lance la fonction selectTags
   // => afficher les tags séléctionnés
 
-  // creation elements Tags
-  function selectTags() {
-    const selectTagsId = document.querySelector("#selected-tags");
-    const createTags = document.createElement("div");
-    selectTagsId.appendChild(createTags);
 
-    createTags.innerHTML = "élement cliqué";
-
-    // trouver un moyen d'afficher dès le premier élément
-    // empecher l'incrémenation de +1 à chaque fois.
-    // window.addEventListener("click", (e) => {
-    //   // pourquoi ça incrément +1 + 2 + 3...
-    //   if (e.target.matches(".dropdown-choices-ingredient-list")) {
-    //     const selectTagsId = document.querySelector("#selected-tags");
-    //     const createTags = document.createElement("div");
-    //     selectTagsId.appendChild(createTags);
-    //     createTags.innerHTML = e.target.textContent;
-    //   }
-    //   // pourquoi ça incrément +1 + 2 + 3...
-    //   else if (e.target.matches(".dropdown-choices-appliance-list")) {
-    //     const selectTagsId = document.querySelector("#selected-tags");
-    //     const createTags = document.createElement("div");
-    //     selectTagsId.appendChild(createTags);
-    //     createTags.innerHTML = e.target.textContent;
-    //   }
-    //   // pourquoi ça incrément +1 + 2 + 3...
-    //   else if (e.target.matches(".dropdown-choices-ustensils-list")) {
-    //     const selectTagsId = document.querySelector("#selected-tags");
-    //     const createTags = document.createElement("div");
-    //     selectTagsId.appendChild(createTags);
-    //     createTags.innerHTML = e.target.textContent;
-    //   }
-    // });
-
-    return;
-  }
 
   // selection des listes
   // faire une recherche par ingredients
