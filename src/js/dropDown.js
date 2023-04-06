@@ -1,6 +1,8 @@
 import { recipes } from "../data/recipes.js";
 import { searchAlgorithme } from "./searchAlgo.js";
-
+const selectedIngredients = [];
+const selectedAppareils = [];
+const selectedUstensils = [];
 // loop for ingredients
 let ingredientsArray = [];
 for (let recipe of recipes) {
@@ -11,11 +13,7 @@ ingredientsArray = ingredientsArray
 
   .map((ingredient) => {
     // ajout d'une balise pour créer le lien
-    return (
-      "<a class=dropdown-choices-ingredient href='#'><li class=dropdown-choices-ingredient-list  >" +
-      ingredient.ingredient.toLowerCase() +
-      "</li></a>"
-    );
+    return ingredient.ingredient.toLowerCase();
   })
 
   .filter((ingredient, index, ingredientList) => {
@@ -24,8 +22,7 @@ ingredientsArray = ingredientsArray
     // j'ai au moins un autre élément avec le même nom
     // indexOf recupère le premier element de ma liste
     return ingredientList.indexOf(ingredient) == index;
-  })
-  .join("");
+  });
 // loop for appliances
 let applianceArray = [];
 for (let recipe of recipes) {
@@ -35,16 +32,11 @@ for (let recipe of recipes) {
 applianceArray = applianceArray
   .map((appliance) => {
     // ajout d'une balise pour créer le lien
-    return (
-      "<a class='dropdown-choices-appliance' href='#'><li class='dropdown-choices-appliance-list' >" +
-      appliance.toLowerCase() +
-      "</li></a>"
-    );
+    return appliance.toLowerCase();
   })
   .filter((appliance, index, applianceList) => {
     return applianceList.indexOf(appliance) == index;
-  })
-  .join("");
+  });
 // loop for Ustensils
 let ustensilsArray = [];
 for (let recipe of recipes) {
@@ -54,44 +46,49 @@ for (let recipe of recipes) {
 ustensilsArray = ustensilsArray
   .map((ustensils) => {
     // ajout d'une balise pour créer le lien
-    return (
-      "<a class='dropdown-choices-ustensils' href='#'><li class='dropdown-choices-ustensils-list' >" +
-      ustensils.toLowerCase() +
-      "</li></a>"
-    );
+    return ustensils.toLowerCase();
   })
   .filter((ustensils, index, ustensilsList) => {
     return ustensilsList.indexOf(ustensils) == index;
-  })
-  .join("");
+  });
 
 // Initialisation des différents dropDowns
-function initTheContainer(btn, container) {
-  // console.log(btn);
-  // console.log(container);
-
-  const getTheUlIngredients = container.querySelector("#ingredients-dropdown");
-  const getTheUlAppliance = container.querySelector("#appliances-dropdown");
-  const getTheUlUstensils = container.querySelector("#utensils-dropdown");
+function initTheContainer(btn, container, listElements, listElementsSelected) {
+  // console.log(listElements);
+  // console.log();
+  const listContainer = container.querySelector(".dropdown-choices");
+  const inputSearch = container.querySelector(".tag-search-input");
+  // console.log(listContainer);
 
   // Event au click, ouverture des différents dropdown
   btn.addEventListener("click", (e) => {
     container.classList.add("show");
-
-    // e.target.matches("#ingredients-tag-btn") permet de faire matcher ma cible avec l'id
-    if (e.target.matches("#ingredients-tag-btn")) {
-      getTheUlIngredients.classList.add("show");
-      getTheUlIngredients.innerHTML = ingredientsArray;
-      // console.log(ingredientsArray);
-    } else if (e.target.matches("#appliances-tag-btn")) {
-      getTheUlAppliance.classList.add("show");
-      getTheUlAppliance.innerHTML = applianceArray;
-    } else if (e.target.matches("#utensils-tag-btn")) {
-      getTheUlUstensils.classList.add("show");
-      getTheUlUstensils.innerHTML = ustensilsArray;
-    }
+  });
+  inputSearch.addEventListener("keydown", (e) => {
+    console.log(e.target.value);
+    listContainer.innerHTML = listElements
+      .filter((element) => {
+        // console.log(element);
+        return element.includes(e.target.value);
+      })
+      .map((element) => {
+        return "<li>" + element + "</li>";
+      })
+      .join("");
   });
   // Event au click d'une balise, ajout d'un tag
+  listContainer.innerHTML = listElements
+    .map((element) => {
+      return "<li>" + element + "</li>";
+    })
+    .join("");
+  listContainer.querySelectorAll("li").forEach((element) => {
+    element.addEventListener("click", () => {
+      console.log(element.innerText);
+      listElementsSelected.push(element.innerText);
+      console.log(listElementsSelected);
+    });
+  });
 }
 
 // Fermeture des différents dropdown
@@ -137,9 +134,24 @@ export function dropDownContainer() {
   let appareilsContainer = document.querySelector("#open-appareils-container");
   let utensilsContainer = document.querySelector("#open-utensils-container");
 
-  initTheContainer(ingredientsBtnTag, ingredientContainer);
-  initTheContainer(appliancesBtnTag, appareilsContainer);
-  initTheContainer(utensilsBtnTag, utensilsContainer);
+  initTheContainer(
+    ingredientsBtnTag,
+    ingredientContainer,
+    ingredientsArray,
+    selectedIngredients
+  );
+  initTheContainer(
+    appliancesBtnTag,
+    appareilsContainer,
+    applianceArray,
+    selectedAppareils
+  );
+  initTheContainer(
+    utensilsBtnTag,
+    utensilsContainer,
+    ustensilsArray,
+    selectedUstensils
+  );
 
   // SEARCH ALGO
   searchAlgorithme(ingredientsBtnTag, appliancesBtnTag, utensilsBtnTag);

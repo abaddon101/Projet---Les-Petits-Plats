@@ -55,18 +55,6 @@ export function searchAlgorithme(ingredients, appareil, ustensils) {
   });
   // au clic de mes éléments, lance la fonction selectTags
   // => afficher les tags séléctionnés
-  window.addEventListener("click", function (e) {
-    if (e.target.matches(".dropdown-choices-ingredient-list")) {
-      console.log(e.target.textContent);
-      selectTags();
-    } else if (e.target.matches(".dropdown-choices-appliance-list")) {
-      console.log(e.target.textContent);
-      selectTags();
-    } else if (e.target.matches(".dropdown-choices-ustensils-list")) {
-      console.log(e.target.textContent);
-      selectTags();
-    }
-  });
 
   // creation elements Tags
   function selectTags() {

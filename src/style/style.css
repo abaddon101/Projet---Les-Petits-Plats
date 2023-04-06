@@ -20,37 +20,20 @@ span#launch-search {
 }
 
 .dropdown-choices {
-  display: none;
+  display: block;
   list-style-type: none;
   text-overflow: ellipsis;
 
   overflow: hidden;
 }
-.dropdown-choices-ingredient:hover {
+.dropdown-choices li:hover {
   background-color: white;
   color: black;
 }
-.dropdown-choices-ingredient {
+.dropdown-choices li {
   color: white;
   text-decoration: none;
 }
-.dropdown-choices-appliance:hover {
-  background-color: white;
-  color: black;
-}
-.dropdown-choices-appliance {
-  color: white;
-  text-decoration: none;
-}
-.dropdown-choices-ustensils:hover {
-  background-color: white;
-  color: black;
-}
-.dropdown-choices-ustensils {
-  color: white;
-  text-decoration: none;
-}
-
 
 .show-opts .dropdown-choices {
   display: flex;
@@ -151,6 +134,15 @@ button.btn.selected-tag-btn {
 }
 
 /*Tags*/
+#ingredients-search {
+  width: 100%;
+}
+#appliances-search {
+  width: 100%;
+}
+#utensils-search {
+  width: 100%;
+}
 
 .tag-search-input.form-control::placeholder {
   color: grey !important;
