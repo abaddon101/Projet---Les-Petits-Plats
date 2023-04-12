@@ -62,6 +62,7 @@ function initTheContainer(btn, container, listElements, listElementsSelected) {
   console.log(listElementsSelected);
 
   const listContainer = container.querySelector(".dropdown-choices");
+  // console.log(listContainer);
   const inputSearch = container.querySelector(".tag-search-input");
 
   // Event au click, ouverture des différents dropdown
@@ -80,27 +81,38 @@ function initTheContainer(btn, container, listElements, listElementsSelected) {
       })
       .join("");
   });
-  // Event au click d'une balise, ajout d'un tag
   listContainer.innerHTML = listElements
     .map((element) => {
       return "<li>" + element + "</li>";
     })
     .join("");
 
-  // recupère toute les li
+  // recupère toute les <li>
   listContainer.querySelectorAll("li").forEach((element) => {
-    // fait un event au click sur chacun des li
+    // Event au click d'une li, ajout d'un tag
     element.addEventListener("click", () => {
       const selectTagsId = document.querySelector("#selected-tags");
       const createTags = document.createElement("div");
+
       selectTagsId.appendChild(createTags);
-      // pousse ensuite les élements sélectionné
-      listElementsSelected.push(element.innerText);
-      // console.log(listElementsSelected);
-      // maintenant renvoyer ces élements
-      // dans un tag qui s'iplémentera au dessus
-      createTags.innerHTML = element.innerText;
+
+      //  ajoute une condition, si mes éléments, sont séléctionné :
+      // on les ajoutes dans un tag, et on les supprimes de ma liste
+      if (listElementsSelected.push(element.innerText)) {
+        // retire les élément du tableau
+        listElements.splice(0, 1);
+        //maintenant supprime les éléments de la liste
+        element.remove();
+        // maintenant renvoi ces élements
+        // dans un tag qui s'iplémentera au dessus
+        createTags.innerHTML = element.innerText;
+        console.log(listElementsSelected);
+        console.log(listElements);
+      }
     });
+    // listElementsSelected.addEventListener("click", () => {
+    //   console.log("tags clické");
+    // });
   });
 }
 
