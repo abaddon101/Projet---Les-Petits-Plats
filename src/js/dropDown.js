@@ -6,6 +6,7 @@ import { recipes } from "../data/recipes.js";
 const selectedIngredients = [];
 const selectedAppareils = [];
 const selectedUstensils = [];
+
 // loop for ingredients
 let ingredientsArray = [];
 for (let recipe of recipes) {
@@ -59,61 +60,92 @@ ustensilsArray = ustensilsArray
 function initTheContainer(btn, container, listElements, listElementsSelected) {
   // console.log(listElements);
   //les tableaux sont vides jusqu'a çe qu'on les exploite
-  console.log(listElementsSelected);
+  // console.log(listElementsSelected);
 
   const listContainer = container.querySelector(".dropdown-choices");
   // console.log(listContainer);
   const inputSearch = container.querySelector(".tag-search-input");
+  const selectTagsId = document.querySelector("#selected-tags");
+  const createTags = document.createElement("button");
+  createTags.className = "tags";
 
   // Event au click, ouverture des différents dropdown
   btn.addEventListener("click", (e) => {
     container.classList.add("show");
   });
-  inputSearch.addEventListener("keydown", (e) => {
+  inputSearch.addEventListener("keyup", (e) => {
     console.log(e.target.value);
-    listContainer.innerHTML = listElements
-      .filter((element) => {
-        // console.log(element);
-        return element.includes(e.target.value);
-      })
-      .map((element) => {
-        return "<li>" + element + "</li>";
-      })
-      .join("");
+    displayList(
+      listContainer,
+      listElements,
+      e.target.value,
+      listElementsSelected
+    );
   });
+  displayList(listContainer, listElements, "", listElementsSelected);
+
+  // Event, au clic d'un tag, on le supprime du selectTagsId
+}
+function displayList(
+  listContainer,
+  listElements,
+  search,
+  listElementsSelected
+) {
+  console.log(listElementsSelected);
   listContainer.innerHTML = listElements
+    .filter((element) => {
+      if (listElementsSelected.indexOf(element) != -1) {
+        return false;
+      }
+      return element.includes(search);
+    })
     .map((element) => {
       return "<li>" + element + "</li>";
     })
     .join("");
-
   // recupère toute les <li>
   listContainer.querySelectorAll("li").forEach((element) => {
-    // Event au click d'une li, ajout d'un tag
-    element.addEventListener("click", () => {
-      const selectTagsId = document.querySelector("#selected-tags");
-      const createTags = document.createElement("div");
+    const selectTagsId = document.querySelector("#selected-tags");
 
+    // Event au click d'une li, ajout d'un tag
+
+    element.addEventListener("click", () => {
+      const createTags = document.createElement("button");
       selectTagsId.appendChild(createTags);
 
       //  ajoute une condition, si mes éléments, sont séléctionné :
       // on les ajoutes dans un tag, et on les supprimes de ma liste
-      if (listElementsSelected.push(element.innerText)) {
-        // retire les élément du tableau
-        listElements.splice(0, 1);
-        //maintenant supprime les éléments de la liste
-        element.remove();
-        // maintenant renvoi ces élements
-        // dans un tag qui s'iplémentera au dessus
-        createTags.innerHTML = element.innerText;
-        console.log(listElementsSelected);
-        console.log(listElements);
-      }
+      listElementsSelected.push(element.innerText);
+      // retire les élément du tableau
+      // listElements.splice(0, 1);
+      // //maintenant supprime les éléments de la liste
+      // element.remove();
+      // maintenant renvoi ces élements
+      // dans un tag qui s'iplémentera au dessus
+      createTags.innerHTML =
+        element.innerText + "<i class='far fa-times-circle ml-2'></i>";
+      createTags.addEventListener("click", () => {
+        createTags.remove();
+        // console.log(listElementsSelected);
+        // console.log(createTags.innerText);
+        listElementsSelected = listElementsSelected.filter((item) => {
+          return item != createTags.innerText;
+        });
+        displayList(listContainer, listElements, search, listElementsSelected);
+      });
+
+      displayList(listContainer, listElements, search, listElementsSelected);
+      console.log(listElementsSelected);
+      console.log(listElements);
     });
-    // listElementsSelected.addEventListener("click", () => {
-    //   console.log("tags clické");
-    // });
   });
+
+  // listContainer.innerHTML = listElements
+  // .filter((element) => {
+  //   // console.log(element);
+  //   return element.includes(e.target.value);
+  // })
 }
 
 // Fermeture des différents dropdown

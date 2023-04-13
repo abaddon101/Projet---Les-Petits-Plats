@@ -67,6 +67,23 @@ li.dropdown-item {
   margin-top: 0px;
 }
 
+/* Tags */
+.tags {
+  border: 0px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  padding: 10px;
+}
+.far {
+  margin-left: 5px;
+  color: white;
+  font-size: 25px;
+}
+
 /*BTN*/
 .btn {
   padding: 1.25rem;
@@ -78,7 +95,7 @@ li.dropdown-item {
   color: white;
 }
 
-/* */
+/* BTN Droopdown */
 
 .btn.bg-green,
 .bg-green,
