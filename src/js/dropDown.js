@@ -120,7 +120,6 @@ function displayList(
       listElementsSelected.push(element.innerText);
       createTags.innerHTML =
         element.innerText + "<i class='far fa-times-circle ml-2'></i>";
-      let color;
 
       if (listContainer.id === "ingredients-dropdown") {
         createTags.style.backgroundColor = "#0b5ed7";
