@@ -109,4 +109,3 @@ const createCard = (recipe) => {
 };
 
 recipesArray.forEach((recipe) => createCard(recipe));
-

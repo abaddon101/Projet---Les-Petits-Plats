@@ -62,13 +62,13 @@ li.dropdown-item {
   width: 33%;
 }
 
-.container-tag-options.bg-green.show-opts,
+/* .container-tag-options.bg-green.show-opts,
 .container-tag-options.bg-orange.show-opts {
   margin-top: 0px;
-}
+} */
 
 /* Tags */
-.tags {
+.btnTag {
   border: 0px solid black;
   border-radius: 5px;
   display: flex;

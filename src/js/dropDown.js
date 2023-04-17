@@ -55,26 +55,22 @@ ustensilsArray = ustensilsArray
   .filter((ustensils, index, ustensilsList) => {
     return ustensilsList.indexOf(ustensils) == index;
   });
-
 // Initialisation des différents dropDowns
 function initTheContainer(btn, container, listElements, listElementsSelected) {
-  // console.log(listElements);
   //les tableaux sont vides jusqu'a çe qu'on les exploite
-  // console.log(listElementsSelected);
-
+  console.log(container);
   const listContainer = container.querySelector(".dropdown-choices");
-  // console.log(listContainer);
+  console.log(listContainer);
   const inputSearch = container.querySelector(".tag-search-input");
   const selectTagsId = document.querySelector("#selected-tags");
   const createTags = document.createElement("button");
   createTags.className = "tags";
-
   // Event au click, ouverture des différents dropdown
   btn.addEventListener("click", (e) => {
     container.classList.add("show");
   });
   inputSearch.addEventListener("keyup", (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     displayList(
       listContainer,
       listElements,
@@ -82,22 +78,27 @@ function initTheContainer(btn, container, listElements, listElementsSelected) {
       listElementsSelected
     );
   });
-  displayList(listContainer, listElements, "", listElementsSelected);
 
-  // Event, au clic d'un tag, on le supprime du selectTagsId
+  displayList(listContainer, listElements, "", listElementsSelected);
 }
+
 function displayList(
   listContainer,
   listElements,
   search,
   listElementsSelected
 ) {
-  console.log(listElementsSelected);
+  // console.log(listElements);
   listContainer.innerHTML = listElements
     .filter((element) => {
+      // console.log(element);
+      // La méthode indexOf renvoie le premier index auquel un élément donné peut être trouvé
+      // Dans le tableau, ou -1 s'il n'est pas présent
+      // Permet  à la selection d'un li, de le retirer du dropdown
       if (listElementsSelected.indexOf(element) != -1) {
         return false;
       }
+      // retourne le tableau avec tout les li
       return element.includes(search);
     })
     .map((element) => {
@@ -107,47 +108,47 @@ function displayList(
   // recupère toute les <li>
   listContainer.querySelectorAll("li").forEach((element) => {
     const selectTagsId = document.querySelector("#selected-tags");
+    // console.log(listContainer.id);
 
     // Event au click d'une li, ajout d'un tag
-
     element.addEventListener("click", () => {
       const createTags = document.createElement("button");
-      selectTagsId.appendChild(createTags);
+      console.log(element.innerText);
 
-      //  ajoute une condition, si mes éléments, sont séléctionné :
-      // on les ajoutes dans un tag, et on les supprimes de ma liste
+      selectTagsId.appendChild(createTags);
+      createTags.className = "btnTag";
       listElementsSelected.push(element.innerText);
-      // retire les élément du tableau
-      // listElements.splice(0, 1);
-      // //maintenant supprime les éléments de la liste
-      // element.remove();
-      // maintenant renvoi ces élements
-      // dans un tag qui s'iplémentera au dessus
       createTags.innerHTML =
         element.innerText + "<i class='far fa-times-circle ml-2'></i>";
+      let color;
+
+      if (listContainer.id === "ingredients-dropdown") {
+        createTags.style.backgroundColor = "#0b5ed7";
+        createTags.style.color = "white";
+        // console.log(element.innerText + " est un " + "ingrédient");
+      }
+      if (listContainer.id === "appliances-dropdown") {
+        createTags.style.backgroundColor = "#00a881";
+        createTags.style.color = "white";
+        // console.log(element.innerText + " est un " + "appareil");
+      }
+      if (listContainer.id === "utensils-dropdown") {
+        createTags.style.backgroundColor = "#ff5a47";
+        createTags.style.color = "white";
+        // console.log(element.innerText + " est un " + "ustensil");
+      }
+
       createTags.addEventListener("click", () => {
         createTags.remove();
-        // console.log(listElementsSelected);
-        // console.log(createTags.innerText);
         listElementsSelected = listElementsSelected.filter((item) => {
           return item != createTags.innerText;
         });
         displayList(listContainer, listElements, search, listElementsSelected);
       });
-
       displayList(listContainer, listElements, search, listElementsSelected);
-      console.log(listElementsSelected);
-      console.log(listElements);
     });
   });
-
-  // listContainer.innerHTML = listElements
-  // .filter((element) => {
-  //   // console.log(element);
-  //   return element.includes(e.target.value);
-  // })
 }
-
 // Fermeture des différents dropdown
 function closeTheContainer() {
   let ingredientContainer = document.querySelector(
@@ -155,7 +156,6 @@ function closeTheContainer() {
   );
   let appareilsContainer = document.querySelector("#open-appareils-container");
   let utensilsContainer = document.querySelector("#open-utensils-container");
-
   // on click of the other element, close the last open
   window.addEventListener("click", (e) => {
     // console.log(e.target);
@@ -179,7 +179,6 @@ function closeTheContainer() {
     }
   });
 }
-
 // Fonction qui permet de centraliser les fonctions, et les exporter dans la factory
 export function dropDownContainer() {
   let ingredientsBtnTag = document.querySelector("#ingredients-tag-btn");
@@ -210,10 +209,6 @@ export function dropDownContainer() {
     ustensilsArray,
     selectedUstensils
   );
-
-  // SEARCH ALGO
-  // searchAlgorithme(ingredientsBtnTag, appliancesBtnTag, utensilsBtnTag);
-
   closeTheContainer();
   return;
 }
