@@ -18,34 +18,21 @@ span#launch-search {
   z-index: 100;
   margin-right: 25px;
 }
-
 .dropdown-choices {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
   list-style-type: none;
-  text-overflow: ellipsis;
+  
+}
 
-  overflow: hidden;
+.dropdown-choices li {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
 }
 .dropdown-choices li:hover {
   background-color: white;
   color: black;
-}
-.dropdown-choices li {
-  color: white;
-  text-decoration: none;
-}
-
-.show-opts .dropdown-choices {
-  display: flex;
-  flex-wrap: wrap;
-  writing-mode: vertical-lr;
-  z-index: 3;
-  max-width: 700px;
-  max-height: 400px;
-  overflow: hidden;
-  padding-left: 0;
-  margin: 0;
-  padding: 0;
 }
 
 .fa-chevron-down {
@@ -53,13 +40,67 @@ span#launch-search {
   margin-top: 0.5rem;
 }
 
-li.dropdown-item {
+/* BTN Dropdown */
+.btn.btn-primary,
+.btn-primary,
+input[type="text"] {
   color: white;
-  cursor: pointer;
-  writing-mode: horizontal-tb;
+}
+.btn.btn-primary:hover {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+.btn.bg-green,
+.bg-green,
+input[type="text"] {
+  background-color: #00dca9;
+  color: white;
+}
+
+.btn.bg-green:hover {
+  background-color: #00a881;
+  color: white;
+}
+
+.btn.bg-orange,
+.bg-orange,
+.bg-orange input[type="text"] {
+  background-color: #ff5a47;
+  color: white;
+}
+
+.btn.bg-orange:hover {
+  background-color: #ff2c14;
+  color: white;
+}
+
+.opened-btn-container {
+  display: none;
+  position: relative;
+}
+
+.opened-btn-container.show {
+  width: fit-content;
   display: flex;
-  justify-content: flex-start;
-  width: 33%;
+  justify-content: space-between;
+  flex-direction: column;
+  top: -74px;
+  left: 8px;
+}
+
+button.btn.selected-tag-btn {
+  color: white;
+  margin-right: 1rem;
+}
+
+.opened-btn-container.bg-primary.show {
+  border-radius: 5px;
+}
+.container-tag-options {
+  border-radius: 5px;
+  margin-top: -5px;
+  position: relative;
 }
 
 /* Tags */
@@ -86,74 +127,18 @@ li.dropdown-item {
   width: 250px;
 }
 
-.btn:hover {
-  color: white;
-}
-
-/* BTN Dropdown */
-
-.btn.bg-green,
-.bg-green,
-.bg-green input[type="text"] {
-  background-color: #00dca9;
-  color: white;
-}
-
-.btn.bg-green:hover {
-  background-color: #00a881;
-  color: white;
-}
-
-.btn.bg-orange,
-.bg-orange,
-.bg-orange input[type="text"] {
-  background-color: #ff5a47;
-  color: white;
-}
-
-.btn.bg-orange:hover {
-  background-color: #ff2c14;
-  color: white;
-}
-
-.dropdown-choices {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 5rem;
-}
-
-.opened-btn-container {
-  display: none;
-}
-
-.opened-btn-container.show {
-  width: fit-content;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  position: relative;
-  top: -73px;
-  left: 12px;
-}
-
-button.btn.selected-tag-btn {
-  color: white;
-  margin-right: 1rem;
-}
-
-.opened-btn-container.bg-primary.show {
-  border-radius: 5px;
-}
-
 /*Tags*/
 #ingredients-search {
   width: 100%;
+  display: flex;
 }
 #appliances-search {
   width: 100%;
+  display: flex;
 }
 #utensils-search {
   width: 100%;
+  display: flex;
 }
 
 .tag-search-input.form-control::placeholder {
