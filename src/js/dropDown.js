@@ -1,4 +1,5 @@
 import { recipes } from "../data/recipes.js";
+import { searchAlgo } from "./AlgoRecherche1.js";
 // import { searchAlgorithme } from "./searchAlgo.js";
 // Création de 3 tableaux: Ingrédients, Appareil & Ustensils
 // Qui seront apellés dans la dropDownContainer
@@ -209,6 +210,7 @@ export function dropDownContainer() {
     selectedUstensils
   );
   closeTheContainer();
+  searchAlgo();
   return;
 }
 dropDownContainer();
