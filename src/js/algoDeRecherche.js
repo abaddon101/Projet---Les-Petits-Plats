@@ -67,32 +67,31 @@
 
 // import { recipes } from "../data/recipes.js";
 export function searchAlgo() {
-    const searchBar = document.querySelector("#search-input");
-    // console.log("searchAlgo");
-  
-    searchBar.addEventListener("input", (e) => {
-      const searchLetters = e.target.value;
-      const cards = document.querySelectorAll(".card");
-      filterElement(searchLetters, cards);
-    });
-  }
-  function filterElement(letters, element) {
-    // console.log(letters);
-    if (letters.length >= 3) {
-      for (let i = 0; i < element.length; i++) {
-        if (element[i].textContent.toLowerCase().includes(letters)) {
-          element[i].style.display = "block";
-        } else if (element[i].textContent.toLowerCase().includes("")) {
-          element[i].style.display = "none";
-        }
+  const searchBar = document.querySelector("#search-input");
+  // console.log("searchAlgo");
+
+  searchBar.addEventListener("input", (e) => {
+    const searchLetters = e.target.value;
+    const cards = document.querySelectorAll(".card");
+    filterElement(searchLetters, cards);
+  });
+}
+function filterElement(letters, element) {
+  // console.log(letters);
+  if (letters.length >= 3) {
+    for (let i = 0; i < element.length; i++) {
+      if (element[i].textContent.toLowerCase().includes(letters)) {
+        element[i].style.display = "block";
+      } else {
+        element[i].style.display = "none";
       }
-    } else if (letters.length >= 2) {
-      for (let i = 0; i < element.length; i++) {
-        if (element[i].textContent.toLowerCase().includes("")) {
-          element[i].style.display = "block";
-        }
+    }
+  } else if (letters.length >= 2) {
+    for (let i = 0; i < element.length; i++) {
+      if (element[i].textContent.toLowerCase().includes("")) {
+        element[i].style.display = "block";
       }
     }
   }
-  searchAlgo();
-  
+}
+searchAlgo();
