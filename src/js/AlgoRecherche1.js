@@ -54,33 +54,44 @@
 
 // pour chaque recette de la liste :
 
-    // on cherche à determiner si la recette correspond ou ne correspond pas
-    // Comment ?
-    // si recherche include nom recette ||
-    // si recherche include nom ingrédients
+// on cherche à determiner si la recette correspond ou ne correspond pas
+// Comment ?
+// si recherche include nom recette ||
+// si recherche include nom ingrédients
 
-    // a la fin de la boucle, réafficher le tableau.
+// a la fin de la boucle, réafficher le tableau.
 
-    // affiche les élements correspondants, n'affiche plus les autres
+// affiche les élements correspondants, n'affiche plus les autres
 
 //   FIN
 
+// import { recipes } from "../data/recipes.js";
 export function searchAlgo() {
   const searchBar = document.querySelector("#search-input");
-  console.log("searchAlgo");
+  // console.log("searchAlgo");
+
   searchBar.addEventListener("input", (e) => {
     const searchLetters = e.target.value;
     const cards = document.querySelectorAll(".card");
-    displayRecipe(searchLetters, cards);
+    filterElement(searchLetters, cards);
   });
-
-  return;
 }
-function displayRecipe(letters, elements) {
-    console.log(elements);
-    console.log(letters);
-
-
+function filterElement(letters, element) {
+  // console.log(letters);
+  if (letters.length >= 3) {
+    for (let i = 0; i < element.length; i++) {
+      if (element[i].textContent.toLowerCase().includes(letters)) {
+        element[i].style.display = "block";
+      } else if (element[i].textContent.toLowerCase().includes("")) {
+        element[i].style.display = "none";
+      }
+    }
+  } else if (letters.length >= 2) {
+    for (let i = 0; i < element.length; i++) {
+      if (element[i].textContent.toLowerCase().includes("")) {
+        element[i].style.display = "block";
+      }
+    }
+  }
 }
-// searchAlgo();
-// exemple
+searchAlgo();
