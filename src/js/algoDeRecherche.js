@@ -86,7 +86,7 @@ function filterElement(searchValue, cards) {
       .textContent.toLowerCase();
     return recipeName.includes(searchValue);
   });
-  
+
   if (searchValue.length >= 3) {
     // On utilise la méthode forEach() pour afficher ou masquer les recettes correspondantes en fonction de la valeur de la barre de recherche
     Array.from(cards).forEach((recipe) => {
@@ -97,7 +97,13 @@ function filterElement(searchValue, cards) {
       }
     });
   } else if (searchValue.length >= 2) {
-
+    Array.from(cards).forEach((recipe) => {
+      if (filteredRecipes.includes("recipe")) {
+        recipe.style.display = "none";
+      } else {
+        recipe.style.display = "block";
+      }
+    });
   }
 }
 searchAlgo();
