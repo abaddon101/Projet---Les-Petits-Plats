@@ -65,7 +65,7 @@
 
 //   FIN
 
-import { recipes } from "../data/recipes.js";
+// import { recipes } from "../data/recipes.js";
 
 export function searchAlgo() {
   // On commence par récupérer l'élément HTML de la barre de recherche
@@ -80,31 +80,22 @@ export function searchAlgo() {
 }
 function filterElement(searchValue, cards) {
   const filteredRecipes = Array.from(cards).filter((recipe) => {
-    console.log(cards);
+    if (searchValue.length < 3) {
+      return true;
+    }
     const recipeName = recipe
       .querySelector(".card-title")
       .textContent.toLowerCase();
     return recipeName.includes(searchValue);
   });
 
-  if (searchValue.length >= 3) {
-    // On utilise la méthode forEach() pour afficher ou masquer les recettes correspondantes en fonction de la valeur de la barre de recherche
-    Array.from(cards).forEach((recipe) => {
-      if (filteredRecipes.includes(recipe)) {
-        recipe.style.display = "block";
-      } else {
-        recipe.style.display = "none";
-      }
-    });
-  } else if (searchValue.length >= 2) {
-    Array.from(cards).forEach((recipe) => {
-      // filteredRecipes.includes("recipe")
+  Array.from(cards).forEach((recipe) => {
+    if (filteredRecipes.includes(recipe)) {
       recipe.style.display = "block";
-      //  else {
-      //   recipe.style.display = "block";
-      // }
-    });
-  }
+    } else {
+      recipe.style.display = "none";
+    }
+  });
 }
 searchAlgo();
 
