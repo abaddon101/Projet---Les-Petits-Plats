@@ -98,11 +98,11 @@ function filterElement(searchValue, cards) {
     });
   } else if (searchValue.length >= 2) {
     Array.from(cards).forEach((recipe) => {
-      if (filteredRecipes.includes("recipe")) {
-        recipe.style.display = "none";
-      } else {
-        recipe.style.display = "block";
-      }
+      // filteredRecipes.includes("recipe")
+      recipe.style.display = "block";
+      //  else {
+      //   recipe.style.display = "block";
+      // }
     });
   }
 }
