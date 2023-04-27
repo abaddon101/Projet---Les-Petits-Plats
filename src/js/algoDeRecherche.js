@@ -65,7 +65,7 @@
 
 //   FIN
 
-// import { recipes } from "../data/recipes.js";
+import { recipes } from "../data/recipes.js";
 export function searchAlgo() {
   const searchBar = document.querySelector("#search-input");
   // console.log("searchAlgo");
@@ -73,16 +73,38 @@ export function searchAlgo() {
   searchBar.addEventListener("input", (e) => {
     const searchLetters = e.target.value;
     const cards = document.querySelectorAll(".card");
-    filterElement(searchLetters, cards);
+    const getTheRecipe = recipes;
+    // console.log(getTheRecipe);
+    filterElement(searchLetters, cards, getTheRecipe);
   });
 }
-function filterElement(letters, element) {
-  // console.log(letters);
+function filterElement(letters, element, recipe) {
+  console.log(letters);
+  // console.log(element);
+  console.log(recipe);
   if (letters.length >= 3) {
     for (let i = 0; i < element.length; i++) {
+      // const recette = recipes[i];
+      // console.log(recette[i]);
+      // recupère les names des recettes on des ingrédients
       if (element[i].textContent.toLowerCase().includes(letters)) {
         element[i].style.display = "block";
-      } else if (element[i].textContent.toLowerCase().includes("")) {
+      }
+      // recupère les appareils
+      else if (
+        recipe[i].appliance.toLowerCase() == recipe.appliance
+        // &&
+        // recipe[i].ustensils.toLowerCase() === recipe.ustensils
+      ) {
+        element[i].style.display = "block";
+        recipe[i].style.display = "block"
+      }
+      // recupère les ustensils
+      // else if (recipe[i].ustensils.toLowerCase() === recipe.ustensils) {
+      //   element[i].style.display = "block";
+
+      // }
+      else if (element[i].textContent.toLowerCase().includes("")) {
         element[i].style.display = "none";
       }
     }
