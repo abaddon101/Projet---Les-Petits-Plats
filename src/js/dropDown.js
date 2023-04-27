@@ -60,9 +60,9 @@ ustensilsArray = ustensilsArray
 // Initialisation des différents dropDowns
 function initTheContainer(btn, container, listElements, listElementsSelected) {
   //les tableaux sont vides jusqu'a çe qu'on les exploite
-  console.log(container);
+  // console.log(container);
   const listContainer = container.querySelector(".dropdown-choices");
-  console.log(listContainer);
+  // console.log(listContainer);
   const inputSearch = container.querySelector(".tag-search-input");
   const selectTagsId = document.querySelector("#selected-tags");
   const createTags = document.createElement("button");

@@ -73,47 +73,47 @@ export function searchAlgo() {
   searchBar.addEventListener("input", (e) => {
     const searchLetters = e.target.value;
     const cards = document.querySelectorAll(".card");
-    const getTheRecipe = recipes;
+    // const getTheRecipe = recipes;
     // console.log(getTheRecipe);
-    filterElement(searchLetters, cards, getTheRecipe);
+    filterElement(searchLetters, cards);
   });
 }
-function filterElement(letters, element, recipe) {
-  console.log(letters);
-  // console.log(element);
-  console.log(recipe);
-  if (letters.length >= 3) {
-    for (let i = 0; i < element.length; i++) {
-      // const recette = recipes[i];
-      // console.log(recette[i]);
-      // recupère les names des recettes on des ingrédients
-      if (element[i].textContent.toLowerCase().includes(letters)) {
-        element[i].style.display = "block";
+function filterElement(letters, element) {
+  // console.log(letters);
+  // création d'un tableau qui va filtrer et envoyer des élements à l'intérieur
+  let filterRecipes = [];
+  const words = letters.toLowerCase().trim().split(" ");
+  let isMatched = true;
+  for (let i = 0; i < element.length; i++) {
+    isMatched = true;
+    if (letters.length < 3) {
+      filterRecipes.push(element[i]);
+      continue;
+    }
+    for (let word of words) {
+      if (word === "") {
+        continue;
       }
-      // recupère les appareils
-      else if (
-        recipe[i].appliance.toLowerCase() == recipe.appliance
-        // &&
-        // recipe[i].ustensils.toLowerCase() === recipe.ustensils
+      if (
+        !element[i].textContent.toLowerCase().includes(word) &&
+        !element[i].dataset.appliance.toLowerCase().includes(word) &&
+        !element[i].dataset.ustensils.toLowerCase().includes(word) &&
+        !element[i].dataset.ingredients.toLowerCase().includes(word)
       ) {
-        element[i].style.display = "block";
-        recipe[i].style.display = "block"
-      }
-      // recupère les ustensils
-      // else if (recipe[i].ustensils.toLowerCase() === recipe.ustensils) {
-      //   element[i].style.display = "block";
-
-      // }
-      else if (element[i].textContent.toLowerCase().includes("")) {
-        element[i].style.display = "none";
+        isMatched = false;
       }
     }
-  } else if (letters.length >= 2) {
-    for (let i = 0; i < element.length; i++) {
-      if (element[i].textContent.toLowerCase().includes("")) {
-        element[i].style.display = "block";
-      }
+    if (isMatched) {
+      filterRecipes.push(element[i]);
+    }
+  }
+  for (let i = 0; i < element.length; i++) {
+    if (filterRecipes.includes(element[i])) {
+      element[i].style.display = "block";
+    } else {
+      element[i].style.display = "none";
     }
   }
 }
+
 searchAlgo();
