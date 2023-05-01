@@ -92,9 +92,14 @@ const createCard = (recipe) => {
   //to DOM
   // get the data appliance and ustensils for set attribut to the article :cardContainer
   const getAppliance = recipe[1].appliance;
+  // console.log(recipe);
   const getUstensils = recipe[1].ustensils;
-  cardContainer.setAttribute("appliance", getAppliance);
-  cardContainer.setAttribute("ustensils", getUstensils);
+  const getIngredients = recipe[1].ingredients.map((ingredient) => {
+    return ingredient.ingredient;
+  });
+  cardContainer.setAttribute("data-appliance", getAppliance);
+  cardContainer.setAttribute("data-ustensils", getUstensils);
+  cardContainer.setAttribute("data-ingredients", getIngredients);
 
   // console.log(getAppliance);
   cardContainer.appendChild(image);

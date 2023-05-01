@@ -68,39 +68,54 @@
 // import { recipes } from "../data/recipes.js";
 
 export function searchAlgo() {
-  // On commence par récupérer l'élément HTML de la barre de recherche
   const searchBar = document.querySelector("#search-input");
-  // console.log("searchAlgo");
 
-  // On ajoute un évènement de type "input" sur la barre de recherche
   searchBar.addEventListener("input", (e) => {
-    const searchValue = searchBar.value.toLowerCase();
+    const searchLetters = e.target.value;
     const cards = document.querySelectorAll(".card");
-    filterElement(searchValue, cards);
+    filterElement(searchLetters, cards);
   });
 }
 
-function filterElement(searchValue, cards) {
-  const filteredRecipes = Array.from(cards)
-    .filter((recipe) => {
-      if (searchValue.length < 3) {
-        return true;
-      }
-      const recipeName = recipe
-        .querySelector(".card-title")
-        .textContent.toLowerCase();
-      return recipeName.includes(searchValue);
-    })
-    .map((recipe) => {
-      recipe.style.display = "block";
-      return recipe;
-    });
+function filterElement(letters, elements) {
+  const filterRecipes = [];
+  const words = letters.toLowerCase().trim().split(" ");
 
-  Array.from(cards)
-    .filter((recipe) => !filteredRecipes.includes(recipe))
-    .forEach((recipe) => {
-      recipe.style.display = "none";
-    });
+  elements.forEach((element) => {
+    let isMatched = true;
+
+    if (letters.length < 3) {
+      filterRecipes.push(element);
+      return;
+    }
+
+    for (let word of words) {
+      if (word === "") {
+        continue;
+      }
+
+      if (
+        !element.textContent.toLowerCase().includes(word) &&
+        !element.dataset.appliance.toLowerCase().includes(word) &&
+        !element.dataset.ustensils.toLowerCase().includes(word) &&
+        !element.dataset.ingredients.toLowerCase().includes(word)
+      ) {
+        isMatched = false;
+      }
+    }
+
+    if (isMatched) {
+      filterRecipes.push(element);
+    }
+  });
+
+  elements.forEach((element) => {
+    if (filterRecipes.includes(element)) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  });
 }
 searchAlgo();
 
