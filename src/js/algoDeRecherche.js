@@ -71,6 +71,7 @@ export function searchAlgo() {
   // On commence par récupérer l'élément HTML de la barre de recherche
   const searchBar = document.querySelector("#search-input");
   // console.log("searchAlgo");
+
   // On ajoute un évènement de type "input" sur la barre de recherche
   searchBar.addEventListener("input", (e) => {
     const searchValue = searchBar.value.toLowerCase();
@@ -78,24 +79,28 @@ export function searchAlgo() {
     filterElement(searchValue, cards);
   });
 }
-function filterElement(searchValue, cards) {
-  const filteredRecipes = Array.from(cards).filter((recipe) => {
-    if (searchValue.length < 3) {
-      return true;
-    }
-    const recipeName = recipe
-      .querySelector(".card-title")
-      .textContent.toLowerCase();
-    return recipeName.includes(searchValue);
-  });
 
-  Array.from(cards).forEach((recipe) => {
-    if (filteredRecipes.includes(recipe)) {
+function filterElement(searchValue, cards) {
+  const filteredRecipes = Array.from(cards)
+    .filter((recipe) => {
+      if (searchValue.length < 3) {
+        return true;
+      }
+      const recipeName = recipe
+        .querySelector(".card-title")
+        .textContent.toLowerCase();
+      return recipeName.includes(searchValue);
+    })
+    .map((recipe) => {
       recipe.style.display = "block";
-    } else {
+      return recipe;
+    });
+
+  Array.from(cards)
+    .filter((recipe) => !filteredRecipes.includes(recipe))
+    .forEach((recipe) => {
       recipe.style.display = "none";
-    }
-  });
+    });
 }
 searchAlgo();
 
