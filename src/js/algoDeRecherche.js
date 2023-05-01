@@ -1,4 +1,4 @@
-// Solution 2
+// Solution 1
 // Comment trier/filter mes listes de recettes ?
 
 // Qu'est ce que je dois stocker comme élément à trier ?
@@ -65,82 +65,53 @@
 
 //   FIN
 
-// import { recipes } from "../data/recipes.js";
-
+import { recipes } from "../data/recipes.js";
 export function searchAlgo() {
+  // recupère la searchBar
   const searchBar = document.querySelector("#search-input");
-
+// ajoute un evenement à la searchBar
   searchBar.addEventListener("input", (e) => {
     const searchLetters = e.target.value;
     const cards = document.querySelectorAll(".card");
     filterElement(searchLetters, cards);
   });
 }
-
-function filterElement(letters, elements) {
-  const filterRecipes = [];
+function filterElement(letters, element) {
+  // console.log(letters);
+  // création d'un tableau qui va filtrer et envoyer des élements à l'intérieur
+  let filterRecipes = [];
   const words = letters.toLowerCase().trim().split(" ");
-
-  elements.forEach((element) => {
-    let isMatched = true;
-
+  let isMatched = true;
+  for (let i = 0; i < element.length; i++) {
+    isMatched = true;
     if (letters.length < 3) {
-      filterRecipes.push(element);
-      return;
+      filterRecipes.push(element[i]);
+      continue;
     }
-
     for (let word of words) {
       if (word === "") {
         continue;
       }
-
       if (
-        !element.textContent.toLowerCase().includes(word) &&
-        !element.dataset.appliance.toLowerCase().includes(word) &&
-        !element.dataset.ustensils.toLowerCase().includes(word) &&
-        !element.dataset.ingredients.toLowerCase().includes(word)
+        !element[i].textContent.toLowerCase().includes(word) &&
+        !element[i].dataset.appliance.toLowerCase().includes(word) &&
+        !element[i].dataset.ustensils.toLowerCase().includes(word) &&
+        !element[i].dataset.ingredients.toLowerCase().includes(word)
       ) {
         isMatched = false;
       }
     }
-
     if (isMatched) {
-      filterRecipes.push(element);
+      filterRecipes.push(element[i]);
     }
-  });
-
-  elements.forEach((element) => {
-    if (filterRecipes.includes(element)) {
-      element.style.display = "block";
+  }
+  for (let i = 0; i < element.length; i++) {
+    if (filterRecipes.includes(element[i])) {
+      element[i].style.display = "block";
     } else {
-      element.style.display = "none";
+      element[i].style.display = "none";
     }
-  });
+  }
 }
+
 searchAlgo();
-
-// La fonction searchAlgo sera appelée à chaque fois que l'utilisateur entrera quelque chose dans la barre de recherche
-// function filterElement() {
-//   // // On récupère la valeur de la barre de recherche
-//   // const searchValue = searchBar.value.toLowerCase();
-
-//   // // On sélectionne tous les éléments HTML correspondant aux recettes
-//   // const cards = document.querySelectorAll(".recipe");
-
-//   // On utilise la méthode filter() pour ne garder que les recettes dont le nom contient la valeur de la barre de recherche
-//   const filteredRecipes = Array.from(cards).filter((recipe) => {
-//     const recipeName = recipe
-//       .querySelector(".card-title")
-//       .textContent.toLowerCase();
-//     return recipeName.includes(searchValue);
-//   });
-
-//   // On utilise la méthode forEach() pour afficher ou masquer les recettes correspondantes en fonction de la valeur de la barre de recherche
-//   Array.from(cards).forEach((recipe) => {
-//     if (filteredRecipes.includes(recipe)) {
-//       recipe.style.display = "block";
-//     } else {
-//       recipe.style.display = "none";
-//     }
-//   });
-// }
