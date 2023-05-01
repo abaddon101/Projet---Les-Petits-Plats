@@ -1,4 +1,4 @@
-// Solution
+// Solution 2
 // Comment trier/filter mes listes de recettes ?
 
 // Qu'est ce que je dois stocker comme élément à trier ?
