@@ -67,9 +67,9 @@
 
 import { recipes } from "../data/recipes.js";
 export function searchAlgo() {
+  // récupère la barre de recherche
   const searchBar = document.querySelector("#search-input");
   // console.log("searchAlgo");
-
   searchBar.addEventListener("input", (e) => {
     const searchLetters = e.target.value;
     const cards = document.querySelectorAll(".card");
@@ -77,23 +77,67 @@ export function searchAlgo() {
     // console.log(getTheRecipe);
     filterElement(searchLetters, cards);
   });
+
+  // recupère les container des différents li
+  const ingredientContainer = document.querySelector("#open-ingredient-container");
+  const listContainerIngredient = ingredientContainer.querySelector(".dropdown-choices");
+  addClickEventListener(ingredientContainer, listContainerIngredient);
+
+  const appareilsContainer = document.querySelector("#open-appareils-container");
+  const listContainerAppareil = appareilsContainer.querySelector(".dropdown-choices");
+  addClickEventListener(appareilsContainer, listContainerAppareil);
+
+  const utensilsContainer = document.querySelector("#open-utensils-container");
+  const listContainerUtensils = utensilsContainer.querySelector(".dropdown-choices");
+  addClickEventListener(utensilsContainer, listContainerUtensils);
+
+  function addClickEventListener(container, list) {
+    console.log(container);
+    console.log(list);
+    const listItems = list.querySelectorAll("li");
+    listItems.forEach((li) => {
+      li.addEventListener("click", (e) => {
+        const selected = e.target.textContent.toLowerCase();
+        const cards = document.querySelectorAll(".card");
+        const tag = document.querySelector(".btnTag");
+
+        filterElement(selected, cards, listItems, tag);
+      });
+    });
+  }
 }
-function filterElement(letters, element) {
-  // console.log(letters);
+function filterElement(searchWords, element, li, tag) {
+  console.log(element);
+  console.log(li);
+  console.log(tag);
   // création d'un tableau qui va filtrer et envoyer des élements à l'intérieur
   let filterRecipes = [];
-  const words = letters.toLowerCase().trim().split(" ");
+  console.log(filterRecipes);
+  // création d'un nouveau tableau pour stocker les tags filtrés
+  let filteredItems = [];
+  console.log(filteredItems);
+  // word est utilisé pour extraire les mots clé de la chaine de recherche
+  // fournie par l'utilisateur et les uilise pour filtrer les recette en fonction de ces mots clé
+  // elle stocke un tablaeu de mot clé extrait de la chaine de recherche
+  const words = searchWords.toLowerCase().trim().split(" ");
+
   let isMatched = true;
   for (let i = 0; i < element.length; i++) {
     isMatched = true;
-    if (letters.length < 3) {
+    if (searchWords.length < 3) {
       filterRecipes.push(element[i]);
       continue;
     }
+    //  parcourt chaque mot clé contenu dans la variable "words".
     for (let word of words) {
+      //Si mot clé = chaîne vide, la boucle continue avec l'itération suivante.
       if (word === "") {
         continue;
       }
+      // Sinon, la fonction vérifie si l'un des quatre éléments d'une recette
+      // (textContent, appliance, ustensils, et ingredients) contient le mot clé
+      // Si aucun de ces éléments ne contient le mot clé,
+      // alors la variable "isMatched" est définie sur false
       if (
         !element[i].textContent.toLowerCase().includes(word) &&
         !element[i].dataset.appliance.toLowerCase().includes(word) &&
@@ -103,10 +147,14 @@ function filterElement(letters, element) {
         isMatched = false;
       }
     }
+    // Si tous les mots clés ont été vérifiés et que "isMatched" est toujours à true,
+    // la recette est stockée dans un tableau nommé "filterRecipes".
     if (isMatched) {
       filterRecipes.push(element[i]);
+      filteredItems.push(element[i]);
     }
   }
+  //
   for (let i = 0; i < element.length; i++) {
     if (filterRecipes.includes(element[i])) {
       element[i].style.display = "block";

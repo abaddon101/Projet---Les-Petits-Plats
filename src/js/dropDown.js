@@ -60,7 +60,7 @@ ustensilsArray = ustensilsArray
 // Initialisation des différents dropDowns
 function initTheContainer(btn, container, listElements, listElementsSelected) {
   //les tableaux sont vides jusqu'a çe qu'on les exploite
-  // console.log(container);
+  console.log(container);
   const listContainer = container.querySelector(".dropdown-choices");
   // console.log(listContainer);
   const inputSearch = container.querySelector(".tag-search-input");
@@ -115,7 +115,7 @@ function displayList(
     // Event au click d'une li, ajout d'un tag
     element.addEventListener("click", () => {
       const createTags = document.createElement("button");
-      console.log(element.innerText);
+      // console.log(element.innerText);
 
       selectTagsId.appendChild(createTags);
       createTags.className = "btnTag";
