@@ -100,7 +100,6 @@ export function searchAlgo() {
         const selected = e.target.textContent.toLowerCase();
         const cards = document.querySelectorAll(".card");
         const tag = document.querySelector(".btnTag");
-
         filterElement(selected, cards, listItems, tag);
       });
     });
@@ -118,7 +117,7 @@ function filterElement(searchWords, element, li, tag) {
   console.log(filteredItems);
   // word est utilisé pour extraire les mots clé de la chaine de recherche
   // fournie par l'utilisateur et les uilise pour filtrer les recette en fonction de ces mots clé
-  // elle stocke un tablaeu de mot clé extrait de la chaine de recherche
+  // elle stocke un tableau de mot clé extrait de la chaine de recherche
   const words = searchWords.toLowerCase().trim().split(" ");
 
   let isMatched = true;
