@@ -65,86 +65,86 @@
 
 //   FIN
 
-import { recipes } from "../data/recipes.js";
+// import { recipes } from "../data/recipes.js";
 export function searchAlgo() {
-  // récupère la barre de recherche
   const searchBar = document.querySelector("#search-input");
   // console.log("searchAlgo");
+
   searchBar.addEventListener("input", (e) => {
-    const searchLetters = e.target.value;
-    const cards = document.querySelectorAll(".card");
-    // const getTheRecipe = recipes;
-    // console.log(getTheRecipe);
-    filterElement(searchLetters, cards);
+    updateSearch();
   });
-
-  // recupère les container des différents li
-  const ingredientContainer = document.querySelector("#open-ingredient-container");
-  const listContainerIngredient = ingredientContainer.querySelector(".dropdown-choices");
-  addClickEventListener(ingredientContainer, listContainerIngredient);
-
-  const appareilsContainer = document.querySelector("#open-appareils-container");
-  const listContainerAppareil = appareilsContainer.querySelector(".dropdown-choices");
-  addClickEventListener(appareilsContainer, listContainerAppareil);
-
-  const utensilsContainer = document.querySelector("#open-utensils-container");
-  const listContainerUtensils = utensilsContainer.querySelector(".dropdown-choices");
-  addClickEventListener(utensilsContainer, listContainerUtensils);
-
-  function addClickEventListener(container, list) {
-    console.log(container);
-    console.log(list);
-    const listItems = list.querySelectorAll("li");
-    listItems.forEach((li) => {
-      li.addEventListener("click", (e) => {
-        const selected = e.target.textContent.toLowerCase();
-        const cards = document.querySelectorAll(".card");
-        const tag = document.querySelector(".btnTag");
-        filterElement(selected, cards, listItems, tag);
-      });
-    });
-  }
 }
-function filterElement(searchWords, element, li, tag) {
-  console.log(element);
-  console.log(li);
-  console.log(tag);
-  // création d'un tableau qui va filtrer et envoyer des élements à l'intérieur
-  let filterRecipes = [];
-  console.log(filterRecipes);
-  // création d'un nouveau tableau pour stocker les tags filtrés
-  let filteredItems = [];
-  console.log(filteredItems);
-  // word est utilisé pour extraire les mots clé de la chaine de recherche
-  // fournie par l'utilisateur et les uilise pour filtrer les recette en fonction de ces mots clé
-  // elle stocke un tableau de mot clé extrait de la chaine de recherche
+function updateSearch() {
+  const searchBar = document.querySelector("#search-input");
+  // console.log(searchBar.value);
+  const cards = document.querySelectorAll(".card");
+  filterElement(searchBar.value, cards, window.search);
+  // console.log(window.search);
+}
+function filterElement(searchWords, element, tags) {
+  console.log(tags);
+  const filterRecipes = [];
+  const filteredItems = [];
+
   const words = searchWords.toLowerCase().trim().split(" ");
 
   let isMatched = true;
   for (let i = 0; i < element.length; i++) {
     isMatched = true;
-    if (searchWords.length < 3) {
-      filterRecipes.push(element[i]);
-      continue;
+    if (searchWords.length >= 3) {
+      for (let word of words) {
+        //Si mot clé = chaîne vide, la boucle continue avec l'itération suivante.
+        if (word === "") {
+          continue;
+        }
+        // Sinon, la fonction vérifie si l'un des quatre éléments d'une recette
+        // (textContent, appliance, ustensils, et ingredients) contient le mot clé
+        // Si aucun de ces éléments ne contient le mot clé,
+        // alors la variable "isMatched" est définie sur false
+        if (
+          !element[i].textContent.toLowerCase().includes(word) &&
+          !element[i].dataset.appliance.toLowerCase().includes(word) &&
+          !element[i].dataset.ustensils.toLowerCase().includes(word) &&
+          !element[i].dataset.ingredients.toLowerCase().includes(word)
+        ) {
+          isMatched = false;
+        }
+      }
     }
     //  parcourt chaque mot clé contenu dans la variable "words".
-    for (let word of words) {
-      //Si mot clé = chaîne vide, la boucle continue avec l'itération suivante.
-      if (word === "") {
-        continue;
-      }
-      // Sinon, la fonction vérifie si l'un des quatre éléments d'une recette
-      // (textContent, appliance, ustensils, et ingredients) contient le mot clé
-      // Si aucun de ces éléments ne contient le mot clé,
-      // alors la variable "isMatched" est définie sur false
+
+    // console.log(tags.ingredients);
+    for (let ingredient of tags.ingredients) {
       if (
-        !element[i].textContent.toLowerCase().includes(word) &&
-        !element[i].dataset.appliance.toLowerCase().includes(word) &&
-        !element[i].dataset.ustensils.toLowerCase().includes(word) &&
-        !element[i].dataset.ingredients.toLowerCase().includes(word)
+        !element[i].dataset.ingredients
+          .toLowerCase()
+          .includes(ingredient.toLowerCase())
       ) {
         isMatched = false;
       }
+      // console.log(ingredient);
+    }
+
+    for (let appareil of tags.appareils) {
+      if (
+        !element[i].dataset.appliance
+          .toLowerCase()
+          .includes(appareil.toLowerCase())
+      ) {
+        isMatched = false;
+      }
+      // console.log(appareil);
+    }
+
+    for (let ustensil of tags.ustensils) {
+      if (
+        !element[i].dataset.ustensils
+          .toLowerCase()
+          .includes(ustensil.toLowerCase())
+      ) {
+        isMatched = false;
+      }
+      // console.log(ustensil);
     }
     // Si tous les mots clés ont été vérifiés et que "isMatched" est toujours à true,
     // la recette est stockée dans un tableau nommé "filterRecipes".
@@ -162,5 +162,5 @@ function filterElement(searchWords, element, li, tag) {
     }
   }
 }
-
 searchAlgo();
+window.updateSearch = updateSearch;

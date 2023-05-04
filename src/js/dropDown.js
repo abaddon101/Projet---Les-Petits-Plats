@@ -8,6 +8,11 @@ import { recipes } from "../data/recipes.js";
 const selectedIngredients = [];
 const selectedAppareils = [];
 const selectedUstensils = [];
+window.search = {
+  ingredients: selectedIngredients,
+  appareils: selectedAppareils,
+  ustensils: selectedUstensils,
+};
 
 // loop for ingredients
 let ingredientsArray = [];
@@ -60,7 +65,7 @@ ustensilsArray = ustensilsArray
 // Initialisation des différents dropDowns
 function initTheContainer(btn, container, listElements, listElementsSelected) {
   //les tableaux sont vides jusqu'a çe qu'on les exploite
-  console.log(container);
+  // console.log(container);
   const listContainer = container.querySelector(".dropdown-choices");
   // console.log(listContainer);
   const inputSearch = container.querySelector(".tag-search-input");
@@ -90,7 +95,7 @@ function displayList(
   search,
   listElementsSelected
 ) {
-  // console.log(listElements);
+  console.log(listElementsSelected);
   listContainer.innerHTML = listElements
     .filter((element) => {
       // console.log(element);
@@ -141,11 +146,18 @@ function displayList(
 
       createTags.addEventListener("click", () => {
         createTags.remove();
-        listElementsSelected = listElementsSelected.filter((item) => {
-          return item != createTags.innerText;
-        });
+        // listElementsSelected = listElementsSelected.filter((item) => {
+        //   return item != createTags.innerText;
+        // });
+        const indexOfTag = listElementsSelected.indexOf(createTags.innerText);
+        // console.log(indexOfTag);
+        if (indexOfTag >= 0) {
+          listElementsSelected.splice(indexOfTag, 1);
+        }
+        window.updateSearch();
         displayList(listContainer, listElements, search, listElementsSelected);
       });
+      window.updateSearch();
       displayList(listContainer, listElements, search, listElementsSelected);
     });
   });
