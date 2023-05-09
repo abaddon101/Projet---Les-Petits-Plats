@@ -112,5 +112,14 @@ const createCard = (recipe) => {
   //Put
   mainSection.appendChild(cardContainer);
 };
+//
+// Ici, mon pour chaque élement de mon tableau recipesArray, il recoit l'élément recipes,
+// de cette élement recipe, il va créer les recipes grâce au createCard
 
 recipesArray.forEach((recipe) => createCard(recipe));
+
+function initTheAlgo() {
+  searchAlgo();
+}
+
+initTheAlgo();

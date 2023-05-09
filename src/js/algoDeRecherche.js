@@ -65,53 +65,63 @@
 
 //   FIN
 
-import { recipes } from "../data/recipes.js";
+// import { recipes } from "../data/recipes.js";
 export function searchAlgo() {
-  // recupère la searchBar
   const searchBar = document.querySelector("#search-input");
-// ajoute un evenement à la searchBar
+
   searchBar.addEventListener("input", (e) => {
-    const searchLetters = e.target.value;
-    const cards = document.querySelectorAll(".card");
-    filterElement(searchLetters, cards);
+    updateSearch();
   });
 }
-function filterElement(letters, element) {
-  // console.log(letters);
-  // création d'un tableau qui va filtrer et envoyer des élements à l'intérieur
-  let filterRecipes = [];
-  const words = letters.toLowerCase().trim().split(" ");
-  let isMatched = true;
-  for (let i = 0; i < element.length; i++) {
-    isMatched = true;
-    if (letters.length < 3) {
-      filterRecipes.push(element[i]);
-      continue;
-    }
-    for (let word of words) {
-      if (word === "") {
-        continue;
-      }
-      if (
-        !element[i].textContent.toLowerCase().includes(word) &&
-        !element[i].dataset.appliance.toLowerCase().includes(word) &&
-        !element[i].dataset.ustensils.toLowerCase().includes(word) &&
-        !element[i].dataset.ingredients.toLowerCase().includes(word)
-      ) {
-        isMatched = false;
-      }
-    }
-    if (isMatched) {
-      filterRecipes.push(element[i]);
-    }
-  }
-  for (let i = 0; i < element.length; i++) {
-    if (filterRecipes.includes(element[i])) {
-      element[i].style.display = "block";
+
+function updateSearch() {
+  const searchBar = document.querySelector("#search-input");
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const searchTags = window.search;
+
+  const words = searchBar.value.toLowerCase().trim().split(" ");
+
+  const filteredRecipes = cards.filter((card) => {
+    console.log(card);
+    // Vérifie si la recette correspond à tous les mots clés
+    const matchedKeywords = words.filter((word) => {
+      console.log(word);
+      return (
+        card.textContent.toLowerCase().includes(word) ||
+        card.dataset.appliance.toLowerCase().includes(word) ||
+        card.dataset.ustensils.toLowerCase().includes(word) ||
+        card.dataset.ingredients.toLowerCase().includes(word)
+      );
+    });
+
+    // Vérifie si la recette correspond à tous les tags de recherche
+    const matchedTags =
+      searchTags.ingredients.every((ingredient) =>
+        // console.log(ingredient)
+        card.dataset.ingredients
+          .toLowerCase()
+          .includes(ingredient.toLowerCase())
+      ) &&
+      searchTags.appareils.every((appareil) =>
+        // console.log(appareil)
+        card.dataset.appliance.toLowerCase().includes(appareil.toLowerCase())
+      ) &&
+      searchTags.ustensils.every((ustensil) =>
+        // console.log(ustensils)
+        card.dataset.ustensils.toLowerCase().includes(ustensil.toLowerCase())
+      );
+
+    return matchedKeywords.length === words.length && matchedTags;
+  });
+
+  cards.forEach((card) => {
+    if (filteredRecipes.includes(card)) {
+      card.style.display = "block";
     } else {
-      element[i].style.display = "none";
+      card.style.display = "none";
     }
-  }
+  });
 }
 
 searchAlgo();
+window.updateSearch = updateSearch;
