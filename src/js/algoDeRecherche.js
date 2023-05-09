@@ -82,13 +82,16 @@ function updateSearch() {
   // console.log(window.search);
 }
 function filterElement(searchWords, element, tags) {
-  console.log(tags);
+  // console.log(tags);
   const filterRecipes = [];
   const filteredItems = [];
 
   const words = searchWords.toLowerCase().trim().split(" ");
 
   let isMatched = true;
+  // ajout d'une variable pour vérifier si la recherche est en cours
+  let isFiltering = false;
+  let mainSection = document.getElementById("main");
   for (let i = 0; i < element.length; i++) {
     isMatched = true;
     if (searchWords.length >= 3) {
@@ -97,6 +100,7 @@ function filterElement(searchWords, element, tags) {
         if (word === "") {
           continue;
         }
+
         // Sinon, la fonction vérifie si l'un des quatre éléments d'une recette
         // (textContent, appliance, ustensils, et ingredients) contient le mot clé
         // Si aucun de ces éléments ne contient le mot clé,
@@ -108,6 +112,11 @@ function filterElement(searchWords, element, tags) {
           !element[i].dataset.ingredients.toLowerCase().includes(word)
         ) {
           isMatched = false;
+        }
+        if (!isMatched) {
+          // si aucun mot clé ne correspond, la recherche n'est pas effectuée
+          isFiltering = true; // indique qu'une recherche est en cours
+          break;
         }
       }
     }
@@ -160,6 +169,19 @@ function filterElement(searchWords, element, tags) {
     } else {
       element[i].style.display = "none";
     }
+  }
+  if (isFiltering && filterRecipes.length === 0) {
+    // si aucun élément ne correspond à la recherche
+    const errorElement = document.querySelector("#search-error");
+    errorElement.innerHTML = `Aucune recette ne correspond à votre critère…
+     vous pouvez chercher « tarte aux pommes »,
+      « poisson », etc.`;
+
+    // sélectionne l'élément d'erreur
+    errorElement.style.display = "block"; // affiche l'élément d'erreur
+  } else {
+    const errorElement = document.querySelector("#search-error"); // sélectionne l'élément d'erreur
+    errorElement.style.display = "none"; // masque l'élément d'erreur
   }
 }
 searchAlgo();

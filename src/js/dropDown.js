@@ -95,7 +95,7 @@ function displayList(
   search,
   listElementsSelected
 ) {
-  console.log(listElementsSelected);
+  // console.log(listElementsSelected);
   listContainer.innerHTML = listElements
     .filter((element) => {
       // console.log(element);

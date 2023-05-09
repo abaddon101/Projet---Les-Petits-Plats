@@ -111,6 +111,7 @@ const createCard = (recipe) => {
 
   //Put
   mainSection.appendChild(cardContainer);
+  
 };
 //
 // Ici, mon pour chaque élement de mon tableau recipesArray, il recoit l'élément recipes,
