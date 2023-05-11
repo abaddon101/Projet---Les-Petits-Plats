@@ -73,12 +73,13 @@ export function searchAlgo() {
     updateSearch();
   });
 }
-
 function updateSearch() {
   const searchBar = document.querySelector("#search-input");
   const cards = Array.from(document.querySelectorAll(".card"));
+  // Tags de recherche (ingrédients, appareils, ustensiles) récupérés à partir de la variable globale window.search.
   const searchTags = window.search;
-
+  // Valeur de la barre de recherche récupérée, mise en minuscule, décomposée en un tableau de mots-clés (en supprimant les espaces vides),
+  // puis stockée dans la variable words.
   const words = searchBar.value.toLowerCase().trim().split(" ");
 
   const filteredRecipes = cards.filter((card) => {
@@ -93,14 +94,17 @@ function updateSearch() {
         card.dataset.ingredients.toLowerCase().includes(word)
       );
     });
-
     // Vérifie si la recette correspond à tous les tags de recherche
     const matchedTags =
+   // Pour les tags , la méthode every() est utilisée pour parcourir chaque élément du tableau
+   // searchTags.ingredients ou searchTags.appareil ou searchTags.ustensil 
+   // Pour chaque élément (ingredient),(appareil),(ustensil) du tableau,
+   // la méthode includes() est utilisée pour vérifier si la recette contient cet ingrédient, appareil, .
+   // Si tous les ingrédients sont présents dans la recette, cette partie de l'expression retournera true.
+
       searchTags.ingredients.every((ingredient) =>
         // console.log(ingredient)
-        card.dataset.ingredients
-          .toLowerCase()
-          .includes(ingredient.toLowerCase())
+        card.dataset.ingredients.toLowerCase().includes(ingredient.toLowerCase())
       ) &&
       searchTags.appareils.every((appareil) =>
         // console.log(appareil)
@@ -110,7 +114,6 @@ function updateSearch() {
         // console.log(ustensils)
         card.dataset.ustensils.toLowerCase().includes(ustensil.toLowerCase())
       );
-
     return matchedKeywords.length === words.length && matchedTags;
   });
 
