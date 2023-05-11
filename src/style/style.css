@@ -22,7 +22,6 @@ span#launch-search {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   list-style-type: none;
-  
 }
 
 .dropdown-choices li {
@@ -217,4 +216,11 @@ article.card.recipe-card.pb-3.mb-5 {
   min-width: 30%;
   max-width: 30%;
   cursor: pointer;
+}
+/*Error message*/
+#search-error {
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  padding: 20vh 0;
 }

@@ -121,6 +121,16 @@ function updateSearch() {
       card.style.display = "none";
     }
   });
+  // Affichage du message d'erreur si aucune recette n'est trouvée
+  const errorElement = document.querySelector("#search-error");
+  if (filteredRecipes.length === 0) {
+    errorElement.style.display = "block";
+    errorElement.innerHTML = `Aucune recette ne correspond à votre critère…
+    vous pouvez chercher « tarte aux pommes »,
+     « poisson », etc.`;
+  } else {
+    errorElement.style.display = "none";
+  }
 }
 
 searchAlgo();
