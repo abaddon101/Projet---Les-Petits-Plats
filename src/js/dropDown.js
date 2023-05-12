@@ -16,7 +16,7 @@ window.search = {
 
 function getAvailableList(type) {
   const cards = document.querySelectorAll(".card");
-  console.log(type);
+  // console.log(type);
   return Array.from(cards)
     .filter((card) => {
       // console.log(card.style.display);
