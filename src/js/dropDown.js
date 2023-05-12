@@ -14,6 +14,35 @@ window.search = {
   ustensils: selectedUstensils,
 };
 
+function getAvailableList(type) {
+  const cards = document.querySelectorAll(".card");
+  console.log(type);
+  return Array.from(cards)
+    .filter((card) => {
+      // console.log(card.style.display);
+      return card.style.display !== "none";
+    })
+    .map((card) => {
+      return card.dataset[type].split(",");
+    })
+    .reduce((result, cardIngredients) => {
+      return result.concat(cardIngredients);
+    }, [])
+    .map((ingredient) => {
+      // ajout d'une balise pour créer le lien
+      return ingredient.toLowerCase();
+    })
+
+    .filter((ingredient, index, ingredientList) => {
+      // récupère l'index de l'ingrédient actuellement dans la liste
+      // Si l'index est différent de mon element actuel,
+      // j'ai au moins un autre élément avec le même nom
+      // indexOf recupère le premier element de ma liste
+      return ingredientList.indexOf(ingredient) == index;
+    });
+  // console.log(ingredients);
+}
+
 // loop for ingredients
 let ingredientsArray = [];
 for (let recipe of recipes) {
@@ -63,7 +92,12 @@ ustensilsArray = ustensilsArray
     return ustensilsList.indexOf(ustensils) == index;
   });
 // Initialisation des différents dropDowns
-function initTheContainer(btn, container, listElements, listElementsSelected) {
+function initTheContainer(
+  btn,
+  container,
+  listElementsKey,
+  listElementsSelected
+) {
   //les tableaux sont vides jusqu'a çe qu'on les exploite
   // console.log(container);
   const listContainer = container.querySelector(".dropdown-choices");
@@ -74,29 +108,31 @@ function initTheContainer(btn, container, listElements, listElementsSelected) {
   createTags.className = "tags";
   // Event au click, ouverture des différents dropdown
   btn.addEventListener("click", (e) => {
+    // console.log("dropdown ouvert");
     container.classList.add("show");
+    displayList(listContainer, listElementsKey, "", listElementsSelected);
   });
   inputSearch.addEventListener("keyup", (e) => {
     // console.log(e.target.value);
     displayList(
       listContainer,
-      listElements,
+      listElementsKey,
       e.target.value,
       listElementsSelected
     );
   });
 
-  displayList(listContainer, listElements, "", listElementsSelected);
+  displayList(listContainer, listElementsKey, "", listElementsSelected);
 }
 
 function displayList(
   listContainer,
-  listElements,
+  listElementsKey,
   search,
   listElementsSelected
 ) {
-  console.log(listElementsSelected);
-  listContainer.innerHTML = listElements
+  // console.log(listElementsSelected);
+  listContainer.innerHTML = getAvailableList(listElementsKey)
     .filter((element) => {
       // console.log(element);
       // La méthode indexOf renvoie le premier index auquel un élément donné peut être trouvé
@@ -155,10 +191,15 @@ function displayList(
           listElementsSelected.splice(indexOfTag, 1);
         }
         window.updateSearch();
-        displayList(listContainer, listElements, search, listElementsSelected);
+        displayList(
+          listContainer,
+          listElementsKey,
+          search,
+          listElementsSelected
+        );
       });
       window.updateSearch();
-      displayList(listContainer, listElements, search, listElementsSelected);
+      displayList(listContainer, listElementsKey, search, listElementsSelected);
     });
   });
 }
@@ -207,23 +248,22 @@ export function dropDownContainer() {
   initTheContainer(
     ingredientsBtnTag,
     ingredientContainer,
-    ingredientsArray,
+    "ingredients",
     selectedIngredients
   );
   initTheContainer(
     appliancesBtnTag,
     appareilsContainer,
-    applianceArray,
+    "appliance",
     selectedAppareils
   );
   initTheContainer(
     utensilsBtnTag,
     utensilsContainer,
-    ustensilsArray,
+    "ustensils",
     selectedUstensils
   );
   closeTheContainer();
-  // searchAlgo();
   return;
 }
 dropDownContainer();
