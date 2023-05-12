@@ -83,10 +83,10 @@ function updateSearch() {
   const words = searchBar.value.toLowerCase().trim().split(" ");
 
   const filteredRecipes = cards.filter((card) => {
-    console.log(card);
+    // console.log(card);
     // Vérifie si la recette correspond à tous les mots clés
     const matchedKeywords = words.filter((word) => {
-      console.log(word);
+      // console.log(word);
       return (
         card.textContent.toLowerCase().includes(word) ||
         card.dataset.appliance.toLowerCase().includes(word) ||
