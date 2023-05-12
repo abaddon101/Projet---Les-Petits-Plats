@@ -1,5 +1,4 @@
 // Solution 2
-
 export function searchAlgo() {
   const searchBar = document.querySelector("#search-input");
 
