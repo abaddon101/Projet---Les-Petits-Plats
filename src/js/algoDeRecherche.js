@@ -96,15 +96,11 @@ function updateSearch() {
     });
     // Vérifie si la recette correspond à tous les tags de recherche
     const matchedTags =
-   // Pour les tags , la méthode every() est utilisée pour parcourir chaque élément du tableau
-   // searchTags.ingredients ou searchTags.appareil ou searchTags.ustensil 
-   // Pour chaque élément (ingredient),(appareil),(ustensil) du tableau,
-   // la méthode includes() est utilisée pour vérifier si la recette contient cet ingrédient, appareil, .
-   // Si tous les ingrédients sont présents dans la recette, cette partie de l'expression retournera true.
-
       searchTags.ingredients.every((ingredient) =>
         // console.log(ingredient)
-        card.dataset.ingredients.toLowerCase().includes(ingredient.toLowerCase())
+        card.dataset.ingredients
+          .toLowerCase()
+          .includes(ingredient.toLowerCase())
       ) &&
       searchTags.appareils.every((appareil) =>
         // console.log(appareil)
