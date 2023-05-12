@@ -17,7 +17,7 @@ function updateSearch() {
 function filterElement(searchWords, element, tags) {
   // console.log(tags);
   const filterRecipes = [];
-  const filteredItems = [];
+  // const filteredItems = [];
 
   const words = searchWords.toLowerCase().trim().split(" ");
 
@@ -92,9 +92,10 @@ function filterElement(searchWords, element, tags) {
     // la recette est stockée dans un tableau nommé "filterRecipes".
     if (isMatched) {
       filterRecipes.push(element[i]);
-      filteredItems.push(element[i]);
+      // filteredItems.push(element[i]);
     }
   }
+  // console.log(filteredItems);
   //
   for (let i = 0; i < element.length; i++) {
     if (filterRecipes.includes(element[i])) {
