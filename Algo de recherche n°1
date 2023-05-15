@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-15T08:48:47.854Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="-75QynvjaxxGyWvSgUV6" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-15T09:44:47.587Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="qdt3_Z8DSQ-ljga7HZUy" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
-    <mxGraphModel dx="554" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2049" dy="1080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -46,7 +46,34 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-10" value="Vérifier que la longueur des mots-clés est supérieure ou égale à 3 " style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="280" y="930" width="280" height="150" as="geometry" />
+          <mxGeometry x="280" y="930" width="280" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-14" target="PqLdQz6lLYGXUWiKdrje-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-14" value="Si Oui, &lt;br&gt;marquer la recette correspondante (isMatched =&quot;true&quot;)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1130" width="240" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-17" target="PqLdQz6lLYGXUWiKdrje-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-17" value="Continuer à filtrer &lt;br&gt;les ingrédients,&lt;br&gt;&amp;nbsp;les appareils&lt;br&gt;&amp;nbsp;et les ustensiles&lt;br&gt;&amp;nbsp;en fonction de la correspondance&lt;br&gt;&amp;nbsp;avec les mots-clés :" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1360" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-20" target="PqLdQz6lLYGXUWiKdrje-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-20" value="&amp;nbsp;Si la recette&lt;br&gt;&amp;nbsp;est &quot;correspondante&quot;&lt;br&gt;&amp;nbsp;(isMatched = true), continuer à l&#39;étape 11" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1560" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-22" target="PqLdQz6lLYGXUWiKdrje-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-22" value="Ajouter la recette&lt;br&gt;à la liste des éléments filtrés" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1760" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-24" value="Vérifier &lt;br&gt;si la liste de recette filtrée&lt;br&gt;&amp;nbsp;est vide" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1880" width="200" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
