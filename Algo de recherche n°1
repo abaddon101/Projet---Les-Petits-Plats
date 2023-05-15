@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-15T10:00:58.318Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="5LBvwzflA7bPtH3T9kN5" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-15T10:02:21.962Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Dc2q9a7IlpWrj2uKuqhY" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
-    <mxGraphModel dx="2261" dy="1925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1684" dy="1911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -44,13 +44,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-14" value="Si Oui, &lt;br&gt;marquer la recette correspondante (isMatched =&quot;true&quot;)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="600" width="200" height="170" as="geometry" />
+          <mxGeometry x="80" y="600" width="200" height="170" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-17" target="PqLdQz6lLYGXUWiKdrje-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-17" value="Continuer à filtrer &lt;br&gt;les ingrédients,&lt;br&gt;&amp;nbsp;les appareils&lt;br&gt;&amp;nbsp;et les ustensiles&lt;br&gt;&amp;nbsp;en fonction de la correspondance&lt;br&gt;&amp;nbsp;avec les mots-clés :" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="800" width="240" height="120" as="geometry" />
+          <mxGeometry x="60" y="800" width="240" height="120" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-20" target="PqLdQz6lLYGXUWiKdrje-22">
           <mxGeometry relative="1" as="geometry" />
