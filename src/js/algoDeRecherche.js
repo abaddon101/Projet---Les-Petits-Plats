@@ -29,6 +29,7 @@ function updateSearch() {
         card.dataset.ingredients.toLowerCase().includes(word)
       );
     });
+
     // Vérifie si la recette correspond à tous les tags de recherche
     const matchedTags =
       searchTags.ingredients.every((ingredient) =>
@@ -45,6 +46,7 @@ function updateSearch() {
         // console.log(ustensils)
         card.dataset.ustensils.toLowerCase().includes(ustensil.toLowerCase())
       );
+    // console.log(matchedKeywords.length === words.length && matchedTags);
     return matchedKeywords.length === words.length && matchedTags;
   });
 
