@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-15T16:21:24.397Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="W2aFME2ra3si_ipngBZ2" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-16T16:02:39.240Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="MbNchVLg41Aii-Xdv_Lv" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
-    <mxGraphModel dx="1684" dy="1911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2261" dy="1925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -29,6 +29,9 @@
           <mxGeometry x="320" y="240" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-5" target="PqLdQz6lLYGXUWiKdrje-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-5" target="PqLdQz6lLYGXUWiKdrje-53">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-5" value="Fonction filterElement()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -107,6 +110,21 @@
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-51" value="Affiche&lt;br&gt;&amp;nbsp;un message d&#39;erreur&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="340" y="890" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-53" target="PqLdQz6lLYGXUWiKdrje-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-53" target="PqLdQz6lLYGXUWiKdrje-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-53" target="PqLdQz6lLYGXUWiKdrje-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-53" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="400" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-58" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="600" width="180" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
