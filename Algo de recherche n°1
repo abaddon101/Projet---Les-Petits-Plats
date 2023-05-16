@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-16T16:17:08.449Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="kXP9hLXFC-MgTQmAdRnD" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-16T17:02:17.240Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="jyyz4DVJKWgsc-4lH91R" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
     <mxGraphModel dx="2261" dy="1925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -10,23 +10,17 @@
         <mxCell id="PqLdQz6lLYGXUWiKdrje-1" value="Début de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="-240" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-2" target="PqLdQz6lLYGXUWiKdrje-3">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-2" target="PqLdQz6lLYGXUWiKdrje-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-2" value="Fonction searchAlgo()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-2" value="Fonction searchAlgo()&lt;br&gt;Event : input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="-120" width="200" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-3" target="PqLdQz6lLYGXUWiKdrje-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-3" value="Event : input" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="320" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-4" target="PqLdQz6lLYGXUWiKdrje-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-4" value="Fonction updateSearch()&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="80" width="200" height="50" as="geometry" />
+          <mxGeometry x="320" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-5" target="PqLdQz6lLYGXUWiKdrje-10">
           <mxGeometry relative="1" as="geometry" />
@@ -35,7 +29,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-5" value="Fonction filterElement()&lt;br&gt;défini un tableau vide &lt;br&gt;pour stocker&amp;nbsp;&lt;br&gt;les recettes filtrées&lt;br&gt;filterRecipes[]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="160" width="200" height="150" as="geometry" />
+          <mxGeometry x="320" y="80" width="200" height="150" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-10" target="PqLdQz6lLYGXUWiKdrje-14">
           <mxGeometry relative="1" as="geometry" />
