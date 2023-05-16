@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" modified="2023-05-16T17:20:42.566Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="W7-8PJgX8mZm6buEg5_z" version="21.3.0" type="github">
+  <diagram name="Page-1" id="DS9GHnKJdfnOhe2T6x_Q">
+    <mxGraphModel dx="388" dy="1911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aPdr_9HPi7BD2KFi0sja-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6MPIIOxCFQQPBrVFk7gK-1" target="aPdr_9HPi7BD2KFi0sja-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6MPIIOxCFQQPBrVFk7gK-1" value="Début de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="-240" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aPdr_9HPi7BD2KFi0sja-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aPdr_9HPi7BD2KFi0sja-3" target="aPdr_9HPi7BD2KFi0sja-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aPdr_9HPi7BD2KFi0sja-3" value="Fonction searchAlgo()&lt;br&gt;Récupère la searchBar et&amp;nbsp;&lt;br&gt;ajout un&amp;nbsp;&lt;br&gt;Event&amp;nbsp;&lt;br&gt;met une condition qui va vérifier la valeur de la searchBar,&lt;br&gt;qui apellera updateSearch si la valeur est &amp;lt;=3 ET si la valeur et &amp;gt;=2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="-60" width="390" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="aPdr_9HPi7BD2KFi0sja-6" value="Fonction updateSearch()&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="200" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
