@@ -3,9 +3,7 @@ export function searchAlgo() {
   const searchBar = document.querySelector("#search-input");
 
   searchBar.addEventListener("input", (e) => {
-    if (searchBar.value.length >= 3) {
-      updateSearch();
-    } else if (searchBar.value.length <= 3) {
+    if (searchBar.value.length >= 3 || searchBar.value.length <= 2) {
       updateSearch();
     }
   });
