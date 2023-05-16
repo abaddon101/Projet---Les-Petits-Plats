@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-16T19:59:53.862Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="UUOnzy_kOdh-wBXTwyp0" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-16T20:01:04.159Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="JYMj1UgJkNIxn2-A5hr_" version="21.3.0" type="github">
   <diagram name="Page-1" id="DS9GHnKJdfnOhe2T6x_Q">
     <mxGraphModel dx="1061" dy="2042" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -76,25 +76,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="aPdr_9HPi7BD2KFi0sja-52" value="le tableau filterRecipe&lt;br&gt;&amp;nbsp;sera vide" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="670" y="760" width="210" height="120" as="geometry" />
+          <mxGeometry x="670" y="760" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="aPdr_9HPi7BD2KFi0sja-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aPdr_9HPi7BD2KFi0sja-54" target="aPdr_9HPi7BD2KFi0sja-56">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="aPdr_9HPi7BD2KFi0sja-54" value="le tableau filterRecipe&lt;br&gt;&amp;nbsp;sera rempli" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="345" y="760" width="210" height="120" as="geometry" />
+          <mxGeometry x="345" y="760" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="aPdr_9HPi7BD2KFi0sja-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aPdr_9HPi7BD2KFi0sja-56" target="aPdr_9HPi7BD2KFi0sja-62">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="aPdr_9HPi7BD2KFi0sja-56" value="affichera&lt;br&gt;&amp;nbsp;les cards" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="357" y="960" width="188" height="70" as="geometry" />
+          <mxGeometry x="356" y="880" width="188" height="80" as="geometry" />
         </mxCell>
         <mxCell id="aPdr_9HPi7BD2KFi0sja-58" value="afficher&lt;br&gt;&amp;nbsp;le message d&#39;erreur" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="695" y="960" width="160" height="70" as="geometry" />
+          <mxGeometry x="695" y="880" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="aPdr_9HPi7BD2KFi0sja-62" value="Fin de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="351" y="1130" width="200" height="90" as="geometry" />
+          <mxGeometry x="350" y="1000" width="200" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
