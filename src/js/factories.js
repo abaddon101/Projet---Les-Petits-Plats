@@ -1,5 +1,5 @@
 import { recipes } from "../data/recipes.js";
-import { sortRecipes } from "../js/sortRecipes.js";
+// import { sortRecipes } from "../js/sortRecipes.js";
 import { searchAlgo } from "./algoDeRecherche.js";
 import { dropDownContainer } from "../js/dropDown.js";
 //creation of an object with the array
