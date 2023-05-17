@@ -1,146 +1,141 @@
-<mxfile host="app.diagrams.net" modified="2023-05-16T20:05:35.085Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="ANOhDMfMaszcvAClujaJ" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-17T10:37:13.658Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="iIdlqswAxcYU5KNEvtBj" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
-    <mxGraphModel dx="2116" dy="2229" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2193" dy="1889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-1" target="PqLdQz6lLYGXUWiKdrje-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-1" value="Début de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="-480" width="200" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-2" target="PqLdQz6lLYGXUWiKdrje-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-2" value="Fonction searchAlgo()&lt;br&gt;Récupère la serachBar et&amp;nbsp;&lt;br&gt;ajout un&amp;nbsp;&lt;br&gt;Event&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="-360" width="200" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-4" target="PqLdQz6lLYGXUWiKdrje-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-4" value="Fonction updateSearch()&amp;nbsp;&lt;br&gt;recupère la searchBar&lt;br&gt;recupère les cards&lt;br&gt;appel de la fonction filterElement avec 3 params:&lt;br&gt;&amp;nbsp;( - searchBar.value&lt;br&gt;-cards&lt;br&gt;- window.search(pour faire simple, il récupère les tags)&lt;br&gt;)&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="-240" width="440" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-5" target="PqLdQz6lLYGXUWiKdrje-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-5" target="PqLdQz6lLYGXUWiKdrje-53">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-5" value="Fonction filterElement()&lt;br&gt;récupère les ( - searchBar.value,&lt;br&gt;- les cards&lt;br&gt;- les tags)&lt;br&gt;défini un tableau videpour stocker les recettes filtrées : filterRecipes[]&lt;br&gt;défini isMatched&lt;br&gt;défini isFiltering" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="-80" width="440" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-10" target="PqLdQz6lLYGXUWiKdrje-14">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-10" target="PqLdQz6lLYGXUWiKdrje-47">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-10" value="Vérifier &lt;br&gt;que la longueur des mots-clés&lt;br&gt;&amp;nbsp;est &amp;gt;= 3 " style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="150" y="120" width="200" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-14" target="PqLdQz6lLYGXUWiKdrje-17">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-14" value="Si Oui, &lt;br&gt;marquer la recette correspondante (isMatched =&quot;true&quot;)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="310" width="200" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-17" target="PqLdQz6lLYGXUWiKdrje-20">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-17" value="Continuer à filtrer &lt;br&gt;les ingrédients,&lt;br&gt;&amp;nbsp;les appareils&lt;br&gt;&amp;nbsp;et les ustensiles&lt;br&gt;&amp;nbsp;en fonction de la correspondance&lt;br&gt;&amp;nbsp;avec les mots-clés :" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="70" y="525" width="240" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-20" target="PqLdQz6lLYGXUWiKdrje-22">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-20" value="&amp;nbsp;Si la recette&lt;br&gt;&amp;nbsp;est &quot;correspondante&quot;&lt;br&gt;&amp;nbsp;(isMatched = true)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="680" width="200" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-22" target="PqLdQz6lLYGXUWiKdrje-24">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-22" value="Ajouter la recette&lt;br&gt;à la liste des éléments filtrés&lt;br&gt;Dans le tableau&lt;br&gt;&amp;nbsp;filterRecipes[]" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="880" width="200" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-24" target="PqLdQz6lLYGXUWiKdrje-28">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="120" y="2050" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-24" target="PqLdQz6lLYGXUWiKdrje-31">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-24" value="Vérifier &lt;br&gt;si la liste de recette filtrée&lt;br&gt;&amp;nbsp;est vide" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="1000" width="200" height="160" as="geometry" />
-        </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-28" value="Si elle est vide, &lt;br&gt;afficher un message d&#39;erreur&lt;br&gt;&amp;nbsp;et&lt;br&gt;&amp;nbsp;cacher les résultats de recherche" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="-80" y="1200" width="230" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-31" target="PqLdQz6lLYGXUWiKdrje-33">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-80" target="PqLdQz6lLYGXUWiKdrje-82">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-31" value="Sinon,&lt;br&gt;Afficher les résultats de&lt;br&gt;recherche&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="1200" width="200" height="80" as="geometry" />
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-80" value="Début de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="-1169" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-33" target="PqLdQz6lLYGXUWiKdrje-35">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-82" target="PqLdQz6lLYGXUWiKdrje-84">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-33" value="Mettre à jour l&#39;affichage des éléments" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="1320" width="200" height="80" as="geometry" />
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-82" value="Fonction searchAlgo()&lt;br&gt;Récupère la serachBar et&amp;nbsp;&lt;br&gt;ajout un&amp;nbsp;&lt;br&gt;Event&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="-1049" width="200" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-35" value="Fin de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="1450" width="200" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-14" target="PqLdQz6lLYGXUWiKdrje-14">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-84" target="PqLdQz6lLYGXUWiKdrje-87">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-47" target="PqLdQz6lLYGXUWiKdrje-51">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-84" value="Fonction updateSearch()&amp;nbsp;&lt;br&gt;recupère la searchBar&lt;br&gt;recupère les cards&lt;br&gt;appel de la fonction filterElement avec 3 params:&lt;br&gt;&amp;nbsp;( - searchBar.value&lt;br&gt;-cards&lt;br&gt;- window.search(pour faire simple, il récupère les tags)&lt;br&gt;)&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-620" y="-929" width="440" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-87" target="PqLdQz6lLYGXUWiKdrje-90">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-47" value="Si Non" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="320" y="320" width="200" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-51" value="Affiche&lt;br&gt;&amp;nbsp;un message d&#39;erreur&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="340" y="525" width="160" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-53" target="PqLdQz6lLYGXUWiKdrje-58">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-87" target="PqLdQz6lLYGXUWiKdrje-114">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-53" target="PqLdQz6lLYGXUWiKdrje-58">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-87" value="Fonction filterElement()&lt;br&gt;récupère les ( - searchBar.value,&lt;br&gt;- les cards&lt;br&gt;- les tags)&lt;br&gt;défini un tableau videpour stocker les recettes filtrées : filterRecipes[]&lt;br&gt;défini isMatched&lt;br&gt;défini isFiltering" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-620" y="-769" width="440" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-90" target="PqLdQz6lLYGXUWiKdrje-92">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-53" target="PqLdQz6lLYGXUWiKdrje-47">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-89" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-90" target="PqLdQz6lLYGXUWiKdrje-109">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-53" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="500" y="120" width="180" height="160" as="geometry" />
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-90" value="Vérifier &lt;br&gt;que la longueur des mots-clés&lt;br&gt;&amp;nbsp;est &amp;gt;= 3 " style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="-569" width="200" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-58" target="PqLdQz6lLYGXUWiKdrje-63">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-91" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-92" target="PqLdQz6lLYGXUWiKdrje-94">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-58" target="PqLdQz6lLYGXUWiKdrje-20">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-92" value="Si Oui, &lt;br&gt;marquer la recette correspondante (isMatched =&quot;true&quot;)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="-379" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-93" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-94" target="PqLdQz6lLYGXUWiKdrje-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-94" value="Continuer à filtrer &lt;br&gt;les ingrédients,&lt;br&gt;&amp;nbsp;les appareils&lt;br&gt;&amp;nbsp;et les ustensiles&lt;br&gt;&amp;nbsp;en fonction de la correspondance&lt;br&gt;&amp;nbsp;avec les mots-clés :" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="-164" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-95" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-96" target="PqLdQz6lLYGXUWiKdrje-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-96" value="&amp;nbsp;Si la recette&lt;br&gt;&amp;nbsp;est &quot;correspondante&quot;&lt;br&gt;&amp;nbsp;(isMatched = true)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="-9" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-97" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-98" target="PqLdQz6lLYGXUWiKdrje-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-98" value="Ajouter la recette&lt;br&gt;à la liste des éléments filtrés&lt;br&gt;Dans le tableau&lt;br&gt;&amp;nbsp;filterRecipes[]" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="191" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-101" target="PqLdQz6lLYGXUWiKdrje-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-101" value="Vérifier &lt;br&gt;si la liste de recette filtrée&lt;br&gt;&amp;nbsp;est vide" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="311" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-102" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-103" target="PqLdQz6lLYGXUWiKdrje-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-103" value="Sinon,&lt;br&gt;Afficher les résultats de&lt;br&gt;recherche&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="511" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-104" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-105" target="PqLdQz6lLYGXUWiKdrje-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-105" value="Mettre à jour l&#39;affichage des éléments" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="620" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-106" value="Fin de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="750" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-92" target="PqLdQz6lLYGXUWiKdrje-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-109" target="PqLdQz6lLYGXUWiKdrje-110">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-109" value="Si Non" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="-369" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-110" value="Affiche&lt;br&gt;&amp;nbsp;un message d&#39;erreur&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-480" y="-164" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-114" target="PqLdQz6lLYGXUWiKdrje-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-112" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-114" target="PqLdQz6lLYGXUWiKdrje-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-114" target="PqLdQz6lLYGXUWiKdrje-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-114" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="-569" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-115" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-117" target="PqLdQz6lLYGXUWiKdrje-119">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-117" target="PqLdQz6lLYGXUWiKdrje-96">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="1191" as="targetPoint" />
+            <mxPoint x="-460" y="502" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="650" y="620" />
-              <mxPoint x="360" y="620" />
-              <mxPoint x="360" y="760" />
+              <mxPoint x="-170" y="-69" />
+              <mxPoint x="-460" y="-69" />
+              <mxPoint x="-460" y="71" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-58" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="560" y="320" width="180" height="160" as="geometry" />
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-117" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-260" y="-369" width="180" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-63" target="PqLdQz6lLYGXUWiKdrje-71">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-118" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-119" target="PqLdQz6lLYGXUWiKdrje-120">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-63" value="&amp;nbsp;Si la recette&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;est &quot;non correspondante&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;(isMatched = false)" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="560" y="680" width="180" height="160" as="geometry" />
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-119" value="&amp;nbsp;Si la recette&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;est &quot;non correspondante&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;(isMatched = false)" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-260" y="-9" width="180" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-71" value="Affiche&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;un message d&#39;erreur&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="575" y="880" width="150" height="60" as="geometry" />
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-120" value="Affiche&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;un message d&#39;erreur&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-245" y="191" width="150" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
