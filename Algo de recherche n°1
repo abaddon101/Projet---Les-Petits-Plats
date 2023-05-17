@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-05-17T10:46:22.442Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="tchwjo99IS5p4uBY_5Gd" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-17T10:48:10.445Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="oI8FMQAnvtP7ilUNeMLG" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
-    <mxGraphModel dx="2074" dy="1826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2336" dy="1965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="PqLdQz6lLYGXUWiKdrje-28" value="Si elle est vide, &lt;br&gt;afficher un message d&#39;erreur&lt;br&gt;&amp;nbsp;et&lt;br&gt;&amp;nbsp;cacher les résultats de recherche" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=0;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
-          <mxGeometry x="-490" y="320" width="230" height="80" as="geometry" />
+          <mxGeometry x="-490" y="280" width="230" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-80" target="PqLdQz6lLYGXUWiKdrje-82">
           <mxGeometry relative="1" as="geometry" />
@@ -70,8 +70,13 @@
         <mxCell id="PqLdQz6lLYGXUWiKdrje-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-101" target="PqLdQz6lLYGXUWiKdrje-103">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.576;entryY=0.035;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#E07A5F;fontColor=default;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-101" target="PqLdQz6lLYGXUWiKdrje-28">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;strokeColor=#E07A5F;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-101" target="PqLdQz6lLYGXUWiKdrje-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-510" y="320" />
+              <mxPoint x="-510" y="320" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-101" value="Vérifier &lt;br&gt;si la liste de recette filtrée&lt;br&gt;&amp;nbsp;est vide" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;rounded=0;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
           <mxGeometry x="-730" y="240" width="200" height="160" as="geometry" />
@@ -125,7 +130,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.518;entryY=0.034;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-117" target="PqLdQz6lLYGXUWiKdrje-119">
+        <mxCell id="PqLdQz6lLYGXUWiKdrje-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.518;entryY=0.034;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;fillColor=#ffe6cc;strokeColor=#E07A5F;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-117" target="PqLdQz6lLYGXUWiKdrje-119">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-117" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=0;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
