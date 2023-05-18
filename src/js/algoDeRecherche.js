@@ -16,7 +16,10 @@ function updateSearch() {
   // Valeur de la barre de recherche récupérée, mise en minuscule, décomposée en un tableau de mots-clés (en supprimant les espaces vides),
   // puis stockée dans la variable words.
   const words = searchBar.value.toLowerCase().trim().split(" ");
+  filterElement(cards, searchTags, words);
+}
 
+function filterElement(cards, searchTags, words) {
   const filteredRecipes = cards.filter((card) => {
     // console.log(card);
     // Vérifie si la recette correspond à tous les mots clés
@@ -62,8 +65,8 @@ function updateSearch() {
   if (filteredRecipes.length === 0) {
     errorElement.style.display = "block";
     errorElement.innerHTML = `Aucune recette ne correspond à votre critère…
-    vous pouvez chercher « tarte aux pommes »,
-     « poisson », etc.`;
+      vous pouvez chercher « tarte aux pommes »,
+       « poisson », etc.`;
   } else {
     errorElement.style.display = "none";
   }
