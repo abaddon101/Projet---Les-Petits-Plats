@@ -22,7 +22,7 @@ function filterElement(searchWords, element, tags) {
 
   let isMatched = true;
   // ajout d'une variable pour vérifier si la recherche est en cours
-  let isFiltering = false;
+  // let isFiltering = false;
   let mainSection = document.getElementById("main");
   for (let i = 0; i < element.length; i++) {
     isMatched = true;
@@ -47,7 +47,7 @@ function filterElement(searchWords, element, tags) {
         }
         if (!isMatched) {
           // si aucun mot clé ne correspond, la recherche n'est pas effectuée
-          isFiltering = true; // indique qu'une recherche est en cours
+          // isFiltering = true; // indique qu'une recherche est en cours
           break;
         }
       }
@@ -102,7 +102,7 @@ function filterElement(searchWords, element, tags) {
       element[i].style.display = "none";
     }
   }
-  if (isFiltering && filterRecipes.length === 0) {
+  if ( filterRecipes.length === 0) {
     // si aucun élément ne correspond à la recherche
     const errorElement = document.querySelector("#search-error");
     errorElement.innerHTML = `Aucune recette ne correspond à votre critère…
