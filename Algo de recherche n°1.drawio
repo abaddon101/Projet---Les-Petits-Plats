@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-18T16:23:08.594Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="OkHqiRJcX_xHe2PNXNQX" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-18T16:45:47.684Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="TPmyc0eL-NwTE6tDAPfe" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
     <mxGraphModel dx="3163" dy="1965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -95,7 +95,7 @@
         <mxCell id="NdfaDMDxE9CkbkElT088-12" value="Si &amp;lt;3, &lt;br&gt;la recherche &lt;br&gt;ne se lance pas" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="-810" y="-600" width="170" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="NdfaDMDxE9CkbkElT088-22" value="Affichage message d&#39;erreur" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" vertex="1" parent="1">
+        <mxCell id="NdfaDMDxE9CkbkElT088-22" value="Affichage message d&#39;erreur&lt;br&gt;&amp;amp; cache les autres recettes" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="-865" y="30" width="230" height="80" as="geometry" />
         </mxCell>
       </root>
