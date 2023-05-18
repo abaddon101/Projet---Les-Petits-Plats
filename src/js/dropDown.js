@@ -18,7 +18,7 @@ window.search = {
 function getAvailableList(type) {
   // selectionne tout les elements html,
   const cards = document.querySelectorAll(".card");
-  console.log(type);
+  // console.log(type);
   // les filtres en retournant un tableau contenant uniquement les cartes visibles
   return (
     Array.from(cards)
