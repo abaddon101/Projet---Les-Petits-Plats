@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-18T14:53:33.068Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="2hasPmnBkitxoDBfyYif" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-18T14:54:58.168Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="bBy4AL0UU5EaJyJ53czZ" version="21.3.0" type="github">
   <diagram name="Page-1" id="DS9GHnKJdfnOhe2T6x_Q">
-    <mxGraphModel dx="2022" dy="1799" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="2261" dy="1925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -45,11 +45,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="iTITeKjTLR_rJbMlWT58-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="iTITeKjTLR_rJbMlWT58-14" target="iTITeKjTLR_rJbMlWT58-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="775" y="-340" />
+              <mxPoint x="560" y="-340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="iTITeKjTLR_rJbMlWT58-14" value="&lt;br&gt;const matchTag &lt;br&gt;vérifie si la recette correspond &lt;br&gt;aux tags&lt;br&gt;&amp;nbsp;de recherche" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;labelBackgroundColor=none;" vertex="1" parent="1">
           <mxGeometry x="660" y="-640" width="230" height="285" as="geometry" />
         </mxCell>
         <mxCell id="iTITeKjTLR_rJbMlWT58-23" value="Pour toutes les cards,&lt;br&gt;si la carte est incluse dans filterRecipe&lt;br&gt;on l&#39;affiche&lt;br&gt;Sinon elle est masquée" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" vertex="1" parent="1">
           <mxGeometry x="120" y="-320" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="iTITeKjTLR_rJbMlWT58-31" value="Si aucune recette&lt;br&gt;&amp;nbsp;ne correspond&lt;br&gt;afficher message d&#39;erreur" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" vertex="1" parent="1">
+          <mxGeometry x="450" y="-320" width="220" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
