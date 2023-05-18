@@ -94,7 +94,7 @@ function filterElement(searchWords, element, tags) {
     }
   }
 
-  //
+  // permet l'affichage des cards
   for (let i = 0; i < element.length; i++) {
     if (filterRecipes.includes(element[i])) {
       element[i].style.display = "block";
