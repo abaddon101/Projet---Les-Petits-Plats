@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-05-18T12:58:01.536Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="6NZldibHpe2ALtm9_8TJ" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-18T13:33:31.298Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Y-u2OysdKl_kKV6gprWZ" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
-    <mxGraphModel dx="1570" dy="1911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2261" dy="1925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="PqLdQz6lLYGXUWiKdrje-28" value="Si elle est vide, &lt;br&gt;afficher un message d&#39;erreur&lt;br&gt;&amp;nbsp;et&lt;br&gt;&amp;nbsp;cacher les résultats de recherche" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-300" y="280" width="230" height="80" as="geometry" />
+          <mxGeometry x="-305" y="130" width="230" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-80" target="PqLdQz6lLYGXUWiKdrje-82" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -46,52 +46,41 @@
         <mxCell id="PqLdQz6lLYGXUWiKdrje-92" value="Si Oui, &lt;br&gt;marquer la recette correspondante (isMatched =&quot;true&quot;)" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-670" y="-395" width="200" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-93" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-94" target="PqLdQz6lLYGXUWiKdrje-96" edge="1">
+        <mxCell id="NdfaDMDxE9CkbkElT088-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-94" target="PqLdQz6lLYGXUWiKdrje-98">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-94" value="Continuer à filtrer &lt;br&gt;les ingrédients,&lt;br&gt;&amp;nbsp;les appareils&lt;br&gt;&amp;nbsp;et les ustensiles&lt;br&gt;&amp;nbsp;en fonction de la correspondance&lt;br&gt;&amp;nbsp;avec les mots-clés :" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-690" y="-200" width="240" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-95" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-96" target="PqLdQz6lLYGXUWiKdrje-98" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-96" value="&amp;nbsp;Si la recette&lt;br&gt;&amp;nbsp;est &quot;correspondante&quot;&lt;br&gt;&amp;nbsp;(isMatched = true)" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="-50" width="200" height="160" as="geometry" />
-        </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-97" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-98" target="PqLdQz6lLYGXUWiKdrje-101" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-98" value="Ajouter la recette&lt;br&gt;à la liste des éléments filtrés&lt;br&gt;Dans le tableau&lt;br&gt;&amp;nbsp;filterRecipes[]" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="140" width="200" height="80" as="geometry" />
+          <mxGeometry x="-670" y="-30" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-101" target="PqLdQz6lLYGXUWiKdrje-103" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;strokeColor=#A8201A;labelBackgroundColor=none;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-101" target="PqLdQz6lLYGXUWiKdrje-28" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-510" y="320" />
-              <mxPoint x="-510" y="320" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="NdfaDMDxE9CkbkElT088-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-101" target="PqLdQz6lLYGXUWiKdrje-28">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-101" value="Vérifier &lt;br&gt;si la liste de recette filtrée&lt;br&gt;&amp;nbsp;est vide" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="250" width="200" height="160" as="geometry" />
+          <mxGeometry x="-670" y="90" width="200" height="160" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-102" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-103" target="PqLdQz6lLYGXUWiKdrje-105" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-103" value="Sinon,&lt;br&gt;Afficher les résultats de&lt;br&gt;recherche&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="440" width="200" height="80" as="geometry" />
+          <mxGeometry x="-670" y="300" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-104" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-105" target="PqLdQz6lLYGXUWiKdrje-106" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-105" value="Mettre à jour l&#39;affichage des éléments" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="550" width="200" height="80" as="geometry" />
+          <mxGeometry x="-670" y="400" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-106" value="Fin de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-670" y="680" width="200" height="80" as="geometry" />
+          <mxGeometry x="-670" y="530" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-92" target="PqLdQz6lLYGXUWiKdrje-92" edge="1">
           <mxGeometry relative="1" as="geometry" />
