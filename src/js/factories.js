@@ -118,6 +118,7 @@ const createCard = (recipe) => {
 
 recipesArray.forEach((recipe) => createCard(recipe));
 
+
 function initTheAlgo() {
   searchAlgo();
 }

@@ -4,8 +4,27 @@ input[type="text"] {
   border-color: transparent;
 }
 
-span#launch-search {
-  border: none;
+#row-search-input-container {
+  position: relative;
+  margin: 15px 0px 25px 0px;
+}
+.input-navbar {
+  display: flex;
+  height: 65px;
+  padding: 0px;
+  /* margin: 0px 25px 0px 25px; */
+}
+
+#row-search-input-container #loop-button {
+  position: absolute;
+  font-size: 25px;
+  right: 0px;
+  display: flex;
+  width: 5%;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #search-input {
@@ -13,6 +32,11 @@ span#launch-search {
 }
 
 /*Dropdown*/
+#dropdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 .dropdown-parent {
   position: relative;
   z-index: 100;
@@ -112,6 +136,7 @@ button.btn.selected-tag-btn {
   align-items: center;
   width: auto;
   padding: 10px;
+  margin: 5px;
 }
 .far {
   margin-left: 5px;
@@ -164,7 +189,15 @@ button.btn.selected-tag-btn {
 .ingredient-container {
   overflow: hidden;
 }
-
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  margin: 25px auto;
+  justify-content: space-between;
+  flex-direction: row;
+}
 /*Card*/
 .card {
   border: 1px solid transparent;
@@ -209,7 +242,7 @@ button.btn.selected-tag-btn {
 }
 
 /*recipes*/
-article.card.recipe-card.pb-3.mb-5 {
+.card.recipe-card.pb-3.mb-5 {
   background-color: #f8f9fb;
   border: 1px solid transparent;
   border-radius: 10px;
@@ -217,10 +250,51 @@ article.card.recipe-card.pb-3.mb-5 {
   max-width: 30%;
   cursor: pointer;
 }
+.card.recipe-card.pb-3.mb-5:hover {
+  box-shadow: 1px 1px 5px #ff5a47;
+}
+
 /*Error message*/
 #search-error {
   width: 100%;
   font-size: 24px;
   text-align: center;
   padding: 20vh 0;
+}
+
+/* logo*/
+#container-logo {
+  /* border: 1px solid black; */
+  margin-top: 55px;
+}
+#container-logo nav a {
+  width: 100%;
+}
+#container-logo nav div a img {
+  width: 45px;
+  height: 45px;
+}
+#container-logo nav div a {
+  color: #ce4141;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .card.recipe-card.pb-3.mb-5 {
+    max-width: 45%;
+  }
+  #row-search-input-container #loop-button {
+    position: absolute;
+    right: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card.recipe-card.pb-3.mb-5 {
+    max-width: 100%;
+  }
 }
