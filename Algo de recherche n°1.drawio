@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-20T12:39:56.666Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="yiNliY98Kp8-Aqz7Gl3_" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-20T12:48:30.460Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="0bQjiLlFttHV_KRQ8Q73" version="21.3.0" type="github">
   <diagram name="Page-1" id="CaVi-aEHdHtz-sd3TJJU">
-    <mxGraphModel dx="3163" dy="1965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2514" dy="2058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,31 +8,31 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-28" value="filterRecipe sera vide" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-865" y="-140" width="230" height="80" as="geometry" />
+          <mxGeometry x="-711" y="-260" width="230" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-80" target="PqLdQz6lLYGXUWiKdrje-82" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-80" value="Début de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;fontColor=#143642;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="-1169" width="200" height="90" as="geometry" />
+          <mxGeometry x="-391" y="-1160" width="200" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-81" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-82" target="PqLdQz6lLYGXUWiKdrje-84" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-82" value="Fonction searchAlgo()&lt;br&gt;Récupère la searchBar et&amp;nbsp;&lt;br&gt;add.event sur searchBar" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="-1049" width="200" height="70" as="geometry" />
+          <mxGeometry x="-391" y="-1040" width="200" height="70" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-84" target="PqLdQz6lLYGXUWiKdrje-87" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-84" value="Fonction updateSearch()&amp;nbsp;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;recupère la searchBar&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;recupère les cards&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;appel de la fonction filterElement avec 3 params:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;( searchBar.value,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;cards,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;window.search( les tags))&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" parent="1" vertex="1">
-          <mxGeometry x="-620" y="-950" width="440" height="120" as="geometry" />
+          <mxGeometry x="-440" y="-941" width="300" height="120" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-85" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-87" target="PqLdQz6lLYGXUWiKdrje-90" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-87" value="Fonction filterElement()&lt;br&gt;récupère les ( searchBar.value,&amp;nbsp;les cards,&amp;nbsp;les tags)&lt;br&gt;défini un tableau vide pour stocker les recettes filtrées : filterRecipes[]&lt;br&gt;défini isMatched" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" parent="1" vertex="1">
-          <mxGeometry x="-620" y="-800" width="440" height="120" as="geometry" />
+          <mxGeometry x="-440" y="-791" width="300" height="120" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-90" target="PqLdQz6lLYGXUWiKdrje-92" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -40,63 +40,63 @@
         <mxCell id="NdfaDMDxE9CkbkElT088-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-90" target="NdfaDMDxE9CkbkElT088-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NdfaDMDxE9CkbkElT088-19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-90" target="PqLdQz6lLYGXUWiKdrje-119">
+        <mxCell id="NdfaDMDxE9CkbkElT088-30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-90" target="PqLdQz6lLYGXUWiKdrje-119">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-400" y="-400" />
-              <mxPoint x="-737" y="-400" />
+              <mxPoint x="-291" y="-530" />
+              <mxPoint x="-291" y="-460" />
+              <mxPoint x="-436" y="-460" />
+              <mxPoint x="-436" y="-388" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-90" value="Vérifier &lt;br&gt;que la longueur des mots-clés&lt;br&gt;&amp;nbsp;est &amp;gt;= 3 " style="rhombus;whiteSpace=wrap;html=1;rounded=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="-600" width="200" height="160" as="geometry" />
+          <mxGeometry x="-391" y="-650" width="200" height="160" as="geometry" />
         </mxCell>
         <mxCell id="NdfaDMDxE9CkbkElT088-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-92" target="PqLdQz6lLYGXUWiKdrje-98">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-92" value="Si Oui, &lt;br&gt;marquer la recette correspondante (isMatched =&quot;true&quot;)" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="-120" width="200" height="170" as="geometry" />
+          <mxGeometry x="-391" y="-240" width="200" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-97" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-98" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-400" y="240" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="NdfaDMDxE9CkbkElT088-27" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-98" target="PqLdQz6lLYGXUWiKdrje-103">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-98" value="Ajouter la recette&lt;br&gt;à la liste des éléments filtrés&lt;br&gt;Dans le tableau&lt;br&gt;&amp;nbsp;filterRecipes[]" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="110" width="200" height="80" as="geometry" />
+          <mxGeometry x="-391" y="-50" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-102" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-103" target="PqLdQz6lLYGXUWiKdrje-105" edge="1">
+        <mxCell id="NdfaDMDxE9CkbkElT088-28" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-103" target="PqLdQz6lLYGXUWiKdrje-105">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-103" value="Sinon,&lt;br&gt;Afficher les résultats de&lt;br&gt;recherche dans filtrRecipe[]&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="240" width="200" height="80" as="geometry" />
+          <mxGeometry x="-391" y="60" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PqLdQz6lLYGXUWiKdrje-104" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-105" target="PqLdQz6lLYGXUWiKdrje-106" edge="1">
+        <mxCell id="NdfaDMDxE9CkbkElT088-29" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-105" target="PqLdQz6lLYGXUWiKdrje-106">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-105" value="Mettre à jour l&#39;affichage des éléments" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="350" width="200" height="80" as="geometry" />
+          <mxGeometry x="-391" y="160" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-106" value="Fin de l&#39;algorithme" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="460" width="200" height="80" as="geometry" />
+          <mxGeometry x="-391" y="260" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-107" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" parent="1" source="PqLdQz6lLYGXUWiKdrje-92" target="PqLdQz6lLYGXUWiKdrje-92" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-114" value="Vérifier si un &lt;br&gt;des mots-clés&amp;nbsp;&lt;br&gt;correspond à une &lt;br&gt;donnée de recette" style="rhombus;whiteSpace=wrap;html=1;rounded=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" parent="1" vertex="1">
-          <mxGeometry x="-490" y="-360" width="180" height="160" as="geometry" />
+          <mxGeometry x="-381" y="-430" width="180" height="160" as="geometry" />
         </mxCell>
         <mxCell id="NdfaDMDxE9CkbkElT088-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.551;entryY=-0.016;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="PqLdQz6lLYGXUWiKdrje-119" target="PqLdQz6lLYGXUWiKdrje-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PqLdQz6lLYGXUWiKdrje-119" value="&amp;nbsp;Si la recette&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;est &quot;non correspondante&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;(isMatched = false)" style="rhombus;whiteSpace=wrap;html=1;rounded=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" parent="1" vertex="1">
-          <mxGeometry x="-840" y="-385" width="205" height="185" as="geometry" />
+          <mxGeometry x="-686" y="-480" width="205" height="185" as="geometry" />
         </mxCell>
         <mxCell id="NdfaDMDxE9CkbkElT088-12" value="Si &amp;lt;3, &lt;br&gt;la recherche &lt;br&gt;ne se lance pas" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="-810" y="-600" width="170" height="160" as="geometry" />
+          <mxGeometry x="-670" y="-650" width="170" height="160" as="geometry" />
         </mxCell>
         <mxCell id="NdfaDMDxE9CkbkElT088-22" value="Affichage message d&#39;erreur&lt;br&gt;&amp;amp; cache les autres recettes" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="-865" y="30" width="230" height="80" as="geometry" />
+          <mxGeometry x="-711" y="-130" width="230" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
