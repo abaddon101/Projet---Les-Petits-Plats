@@ -159,7 +159,7 @@ function displayList(
   search,
   listElementsSelected
 ) {
-  console.log(listElementsSelected);
+  // console.log(listElementsSelected);
   // La fonction getAvailableList est appelée à cet endroit
   // pour obtenir la liste des éléments disponibles à afficher
   // dans le conteneur listContainer.
