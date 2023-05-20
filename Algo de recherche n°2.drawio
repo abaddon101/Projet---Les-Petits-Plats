@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-20T12:40:00.310Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="XZhF_F76dvOFsu2Grf6_" version="21.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-20T12:49:05.344Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="pWCrSyUFcGwlw7N6ffLV" version="21.3.0" type="github">
   <diagram name="Page-1" id="DS9GHnKJdfnOhe2T6x_Q">
     <mxGraphModel dx="2620" dy="2114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -39,7 +39,7 @@
         <mxCell id="iTITeKjTLR_rJbMlWT58-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="iTITeKjTLR_rJbMlWT58-33" target="iTITeKjTLR_rJbMlWT58-38">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iTITeKjTLR_rJbMlWT58-33" value="filtre les recettes&lt;br&gt;pour chaque mot de la recherche on vérifie qu&#39;elle correspond&amp;nbsp;&lt;br&gt;et ensuite qu&#39;elle correspond pour chaque tags&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;align=left;" vertex="1" parent="1">
+        <mxCell id="iTITeKjTLR_rJbMlWT58-33" value="filtre les recettes&lt;br&gt;pour chaque mot de la recherche on vérifie qu&#39;elle correspond&amp;nbsp;&lt;br&gt;et ensuite qu&#39;elle correspond pour chaque tags&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;align=left;" vertex="1" parent="1">
           <mxGeometry x="209" y="-620" width="410" height="100" as="geometry" />
         </mxCell>
         <mxCell id="iTITeKjTLR_rJbMlWT58-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.51;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="iTITeKjTLR_rJbMlWT58-38" target="iTITeKjTLR_rJbMlWT58-23">
@@ -53,7 +53,7 @@
         <mxCell id="iTITeKjTLR_rJbMlWT58-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" edge="1" parent="1" source="iTITeKjTLR_rJbMlWT58-38" target="iTITeKjTLR_rJbMlWT58-31">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="iTITeKjTLR_rJbMlWT58-38" value="Si la liste des recettes filtrées&lt;br&gt;contient des éléments" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;" vertex="1" parent="1">
+        <mxCell id="iTITeKjTLR_rJbMlWT58-38" value="Si la liste des recettes filtrées&lt;br&gt;contient des éléments" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#E07A5F;fontColor=#393C56;fillColor=#F2CC8F;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="324" y="-470" width="180" height="160" as="geometry" />
         </mxCell>
         <mxCell id="iTITeKjTLR_rJbMlWT58-43" value="Si la liste ne contient pas d&#39;éléments" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#393C56;" vertex="1" parent="1">
