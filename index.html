@@ -18,20 +18,22 @@
   <body>
     <div class="container-fluid">
       <!--Header-->
-      <div class="row">
+      <div id="container-logo" class="row">
         <nav class="col navbar navbar-expand">
-          <div class="navbar-brand mx-auto d-block mt-4" href="index.html">
-            <img
-              src="/assets/images/logo.png"
-              alt="Les Petits Plats Homepage"
-            />
-            Les Petits plats
+          <div class="navbar-brand mx-auto">
+            <a class="logo" alt="logo" href="index.html">
+              <img
+                src="/assets/images/logo.png"
+                alt="Les Petits Plats Homepage"
+              />
+              <h2>Les Petits plats</h2>
+            </a>
           </div>
         </nav>
       </div>
 
-      <div class="row">
-        <div class="col input-group input-group-lg mx-5 mb-4">
+      <div id="row-search-input-container" class="row">
+        <div class="input-navbar">
           <input
             class="form-control"
             id="search-input"
@@ -39,8 +41,8 @@
             name="search-input"
             placeholder="Rechercher une recette"
           />
-          <div class="input-group-append">
-            <span id="launch-search" class="input-group-text">
+          <div id="loop-button" class="input-group-append">
+            <span id="launch-search">
               <i class="fas fa-search"></i>
             </span>
           </div>
@@ -52,7 +54,7 @@
 
       <!--Dropdown menu filters-->
       <!--Ingredients-->
-      <div class="btn-group ml-3 ml-md-5 mt-3">
+      <div id="dropdown-container">
         <div class="dropdown-parent">
           <button
             id="ingredients-tag-btn"
@@ -145,7 +147,7 @@
 
       <!--Recipe block-->
       <div>
-        <div class="d-flex flex-wrap justify-content-between" id="main"></div>
+        <div id="main"></div>
         <div id="search-error"></div>
       </div>
     </div>
