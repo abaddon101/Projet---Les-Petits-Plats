@@ -82,7 +82,7 @@ function updateSearch() {
   // console.log(window.search);
 }
 function filterElement(searchWords, element, tags) {
-  console.log(tags);
+  // console.log(tags);
   const filterRecipes = [];
   const filteredItems = [];
 
