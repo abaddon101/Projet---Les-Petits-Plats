@@ -1,6 +1,6 @@
 ##### Pour lire le fichier
-Veuillez récuperer le code en le clonant via github desktop ou en le téléchargeant
-puis une fois sur votre bureau, veuillez l'ouvrir dans un éditeur de code, et l'ouvrix avec l'extension Live server
+1- Veuillez récuperer le code en le clonant via github desktop ou en le téléchargeant
+2- Puis une fois sur votre bureau, veuillez l'ouvrir dans un éditeur de code, et l'ouvrir avec l'extension Live server
 
 
 
