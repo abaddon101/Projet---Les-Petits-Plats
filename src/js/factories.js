@@ -1,4 +1,5 @@
 import { recipes } from "../data/recipes.js";
+// import { sortRecipes } from "../js/sortRecipes.js";
 import { searchAlgo } from "./algoDeRecherche.js";
 import { dropDownContainer } from "../js/dropDown.js";
 //creation of an object with the array
@@ -116,6 +117,7 @@ const createCard = (recipe) => {
 // de cette élement recipe, il va créer les recipes grâce au createCard
 
 recipesArray.forEach((recipe) => createCard(recipe));
+
 
 function initTheAlgo() {
   searchAlgo();
